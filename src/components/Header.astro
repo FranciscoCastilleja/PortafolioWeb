@@ -1,12 +1,21 @@
 ---
-
+import HomeIcon from './icons/HomeIcon.astro'
+import ExperienciaIcon from './icons/ExperienciaIcon.astro'
+import ParticipacionEventosIcon from './icons/ParticipacionEventosIcon.astro'
+import ProyectosIcon from './icons/ProyectosIcon.astro'
+import HabilidadesIcon from './icons/HabilidadesIcon.astro'
+import EstoyAprendiendoIcon from './icons/EstoyAprendiendoIcon.astro'
+import SobreMiIcon from './icons/SobreMiIcon.astro'
+import EstudiosIcon from './icons/EstudiosIcon.astro'
+import ContactoIcon from './icons/ContactoIcon.astro'
+import IdiomaIcon from './icons/IdiomaIcon.astro'
 ---
 
-<header class="grid fixed mt-2 w-full h-10 place-items-center">
+<header class="grid fixed mt-2 w-full h-10 place-items-center z-10">
     <nav class="hidden py-1 px-2 size-auto text-white bg-violet-950 rounded-lg lg:inline">
-        <a href="" class="p-1 hover:bg-purple-900 hover:rounded-lg">Inicio</a>
-        <a href="" class="p-1 hover:bg-purple-900 hover:rounded-lg">Experiencia</a>
-        <a href="" class="p-1 hover:bg-purple-900 hover:rounded-lg">Participación en Eventos</a>
+        <a href="#inicio" class="p-1 hover:bg-purple-900 hover:rounded-lg">Inicio</a>
+        <a href="#experiencia" class="p-1 hover:bg-purple-900 hover:rounded-lg">Experiencia</a>
+        <a href="#participacioneventos" class="p-1 hover:bg-purple-900 hover:rounded-lg">Participación en Eventos</a>
         <a href="" class="p-1 hover:bg-purple-900 hover:rounded-lg">Proyectos</a>
         <a href="" class="p-1 hover:bg-purple-900 hover:rounded-lg">Habilidades</a>
         <a href="" class="p-1 hover:bg-purple-900 hover:rounded-lg">Estoy Aprendiendo</a>
@@ -16,64 +25,59 @@
         <a href="" class="p-1 hover:bg-purple-900 hover:rounded-lg">Idioma</a>
     </nav>
     <nav class="flex py-1 px-2 size-auto bg-violet-950 rounded-lg lg:hidden">
-        <a href="" class="block p-2 hover:bg-purple-900 hover:rounded-lg">
-            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/>
-            </svg>
+        <a href="#inicio" class="block p-2 hover:bg-purple-900 hover:rounded-lg">
+            <HomeIcon class="fill-white"/>
+        </a>
+        <a href="#experiencia" class="p-2 hover:bg-purple-900 hover:rounded-lg">
+            <ExperienciaIcon class="fill-white"/>
+        </a>
+        <a href="#participacioneventos" class="p-2 hover:bg-purple-900 hover:rounded-lg">
+            <ParticipacionEventosIcon class="fill-white"/>
         </a>
         <a href="" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17.657 12.007a1.39 1.39 0 0 0 -1.103 .765l-.855 1.723l-1.907 .277c-.52 .072 -.96 .44 -1.124 .944l-.038 .14c-.1 .465 .046 .954 .393 1.29l1.377 1.337l-.326 1.892a1.393 1.393 0 0 0 2.018 1.465l1.708 -.895l1.708 .896a1.388 1.388 0 0 0 1.462 -.105l.112 -.09a1.39 1.39 0 0 0 .442 -1.272l-.325 -1.891l1.38 -1.339c.38 -.371 .516 -.924 .352 -1.427l-.051 -.134a1.39 1.39 0 0 0 -1.073 -.81l-1.907 -.278l-.853 -1.722a1.393 1.393 0 0 0 -1.247 -.773l-.143 .007z" stroke-width="0" />
-                <path d="M6.057 12.007a1.39 1.39 0 0 0 -1.103 .765l-.855 1.723l-1.907 .277c-.52 .072 -.96 .44 -1.124 .944l-.038 .14c-.1 .465 .046 .954 .393 1.29l1.377 1.337l-.326 1.892a1.393 1.393 0 0 0 2.018 1.465l1.708 -.895l1.708 .896a1.388 1.388 0 0 0 1.462 -.105l.112 -.09a1.39 1.39 0 0 0 .442 -1.272l-.324 -1.891l1.38 -1.339c.38 -.371 .516 -.924 .352 -1.427l-.051 -.134a1.39 1.39 0 0 0 -1.073 -.81l-1.908 -.279l-.853 -1.722a1.393 1.393 0 0 0 -1.247 -.772l-.143 .007z" stroke-width="0" />
-                <path d="M11.857 2.007a1.39 1.39 0 0 0 -1.103 .765l-.855 1.723l-1.907 .277c-.52 .072 -.96 .44 -1.124 .944l-.038 .14c-.1 .465 .046 .954 .393 1.29l1.377 1.337l-.326 1.892a1.393 1.393 0 0 0 2.018 1.465l1.708 -.894l1.709 .896a1.388 1.388 0 0 0 1.462 -.105l.112 -.09a1.39 1.39 0 0 0 .442 -1.272l-.325 -1.892l1.38 -1.339c.38 -.371 .516 -.924 .352 -1.427l-.051 -.134a1.39 1.39 0 0 0 -1.073 -.81l-1.908 -.279l-.853 -1.722a1.393 1.393 0 0 0 -1.247 -.772l-.143 .007z" stroke-width="0" />
-            </svg>
+            <ProyectosIcon class="fill-white"/>
         </a>
         <a href="" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21 4.5A1.5 1.5 0 0 0 19.5 3h-3V1.5H15V3H9V1.5H7.5V3h-3A1.5 1.5 0 0 0 3 4.5v15A1.5 1.5 0 0 0 4.5 21h3v-1.5h-3v-15h3V6H9V4.5h6V6h1.5V4.5h3V9H21V4.5Z"></path>
-                <path d="m15.75 11.25 1.912 3.704 4.088.593-3 2.883.75 4.07-3.75-1.922L12 22.5l.75-4.07-3-2.883 4.2-.594 1.8-3.703Z"></path>
-            </svg>
+            <HabilidadesIcon class="fill-white"/>
         </a>
         <a href="" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/>
-            </svg>
+            <EstoyAprendiendoIcon class="fill-white"/>
         </a>
         <a href="" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.5 22.5h-6V3h6v19.5ZM18 21h3V4.5h-3V21Z"></path>
-                <path d="M15 22.5H9V9h6v13.5ZM10.5 21h3V10.5h-3V21Z"></path>
-                <path d="M7.5 22.5h-6v-9h6v9ZM3 21h3v-6H3v6Z"></path>
-            </svg>
+            <SobreMiIcon class="fill-white"/>
         </a>
         <a href="" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                <path d="M386.5 111.5l15.1 249-11-.3c-36.2-.8-71.6 8.8-102.7 28-31-19.2-66.4-28-102.7-28-45.6 0-82.1 10.7-123.5 27.7L93.1 129.6c28.5-11.8 61.5-18.1 92.2-18.1 41.2 0 73.8 13.2 102.7 42.5 27.7-28.3 59-41.7 98.5-42.5zM569.1 448c-25.5 0-47.5-5.2-70.5-15.6-34.3-15.6-70-25-107.9-25-39 0-74.9 12.9-102.7 40.6-27.7-27.7-63.7-40.6-102.7-40.6-37.9 0-73.6 9.3-107.9 25C55.2 442.2 32.7 448 8.3 448H6.9L49.5 98.9C88.7 76.6 136.5 64 181.8 64 218.8 64 257 71.7 288 93.1 319 71.7 357.2 64 394.2 64c45.3 0 93 12.6 132.3 34.9L569.1 448zm-43.4-44.7l-34-280.2c-30.7-14-67.2-21.4-101-21.4-38.4 0-74.4 12.1-102.7 38.7-28.3-26.6-64.2-38.7-102.7-38.7-33.8 0-70.3 7.4-101 21.4L50.3 403.3c47.2-19.5 82.9-33.5 135-33.5 37.6 0 70.8 9.6 102.7 29.6 31.8-20 65.1-29.6 102.7-29.6 52.2 0 87.8 14 135 33.5z"/>
-            </svg>
+            <EstudiosIcon class="fill-white"/>
         </a>
         <a href="" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 256h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zm256-32H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/>
-            </svg>
+            <ContactoIcon class="fill-white"/>
         </a>
         <a href="" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                <path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/>
-            </svg>
-        </a>
-        <a href="" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M96 0C60.7 0 32 28.7 32 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H96zM208 288h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H144c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM512 80c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V80zM496 192c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm16 144c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V336z"/>
-            </svg>
-        </a>
-        <a href="" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                <path d="M0 128C0 92.7 28.7 64 64 64H256h48 16H576c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H320 304 256 64c-35.3 0-64-28.7-64-64V128zm320 0V384H576V128H320zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1h73.6l8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276H141l19-42.8zM448 164c11 0 20 9 20 20v4h44 16c11 0 20 9 20 20s-9 20-20 20h-2l-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45H448 376c-11 0-20-9-20-20s9-20 20-20h52v-4c0-11 9-20 20-20z"/>
-            </svg>
+            <IdiomaIcon class="fill-white"/>
         </a>
     </nav>
 </header>
 
-<style>
-    path { fill: #fff; }
-</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+		var scrollLinks = document.querySelectorAll('a');
+
+		scrollLinks.forEach(function(scrollLink) {
+			scrollLink.addEventListener('click', function(this: HTMLAnchorElement, e) {
+				e.preventDefault();
+
+                let hrefAttribute = this.getAttribute('href');
+
+                if(hrefAttribute) {
+                    var targetId = hrefAttribute.substring(1);
+				
+                    var targetElement = document.getElementById(targetId) as HTMLElement;
+
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+			});
+		});
+	});
+</script>

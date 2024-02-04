@@ -1,0 +1,92 @@
+---
+import ProyectosIcon from "./icons/ProyectosIcon.astro";
+---
+
+<section id="participacioneventos" class="grid mt-20 py-10 w-4/5 h-auto place-items-center">
+    <h2 class="flex pb-1 text-xl font-bold items-center gap-x-1">
+        <ProyectosIcon class="fill-black dark:fill-white"/>
+        Proyectos
+    </h2>
+    <div class="py-2 w-full h-auto lg:max-w-2xl"> 
+        <div id="myBtnContainer" class="flex justify-center">
+            <div class="inline-flex rounded-md shadow-sm" role="group">
+                <button class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white" onclick="filterSelection('all')">
+                    Mostrar Todo
+                </button>
+                <button class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white" onclick="filterSelection('nature')">
+                    Web
+                </button>
+                <button class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white" onclick="filterSelection('cars')">
+                    Desktop
+                </button>
+            </div>  
+        </div>
+        <div class="row">
+            <div class="column nature">
+                <div class="content">
+                <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+                <h4>Mountains</h4>
+                <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column nature">
+                <div class="content">
+                <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+                <h4>Lights</h4>
+                <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column nature">
+                <div class="content">
+                <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+                <h4>Forest</h4>
+                <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            
+            <div class="column cars">
+                <div class="content">
+                <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
+                <h4>Retro</h4>
+                <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column cars">
+                <div class="content">
+                <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+                <h4>Fast</h4>
+                <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column cars">
+                <div class="content">
+                <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+                <h4>Classic</h4>
+                <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            
+            <div class="column people">
+                <div class="content">
+                <img src="/w3images/people1.jpg" alt="People" style="width:100%">
+                <h4>Girl</h4>
+                <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column people">
+                <div class="content">
+                <img src="/w3images/people2.jpg" alt="People" style="width:100%">
+                <h4>Man</h4>
+                <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column people">
+                <div class="content">
+                <img src="/w3images/people3.jpg" alt="People" style="width:100%">
+                <h4>Woman</h4>
+                <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

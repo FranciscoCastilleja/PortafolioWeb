@@ -1,12 +1,18 @@
 ---
+import Experiencia from '../components/Experiencia.astro';
 import Header from '../components/Header.astro';
 import Inicio from '../components/Inicio.astro';
+import ParticipacionEventos from '../components/ParticipacionEventos.astro';
+import Proyectos from '../components/Proyectos.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Portafolio Web | Francisco Castilleja | Ingeniero en Sistemas Computacionales" description="Contratame">
 	<Header/>
-	<main class="grid w-full h-auto place-items-center">
+	<main id="inicio" class="grid w-full h-auto place-items-center">
 		<Inicio/>
+		<Experiencia/>
+		<ParticipacionEventos/>
+		<Proyectos/>
 	</main>
 </Layout>
