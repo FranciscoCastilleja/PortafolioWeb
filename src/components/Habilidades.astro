@@ -11,13 +11,11 @@ import JavaScriptIcon from "./icons/JavaScriptIcon.astro";
 import HTML5Icon from "./icons/HTML5Icon.astro";
 import CSSIcon from "./icons/CSSIcon.astro";
 import CSharpIcon from "./icons/CSharpIcon.astro";
-import VercelIcon from "./icons/VercelIcon.astro";
-import NetlifyIcon from "./icons/NetlifyIcon.astro";
 import TailwindCSSIcon from "./icons/TailwindCSSIcon.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
-import SupabaseIcon from "./icons/SupabaseIcon.astro";
 import MySQLIcon from "./icons/MySQLIcon.astro";
 import MicrosoftSQLServerIcon from "./icons/MicrosoftSQLServerIcon.astro";
+import SpanIcon from "./SpanIcon.astro";
 ---
 
 <section id="habilidades" class="grid mt-20 py-10 w-4/5 h-auto place-items-center">
@@ -25,21 +23,84 @@ import MicrosoftSQLServerIcon from "./icons/MicrosoftSQLServerIcon.astro";
         <HabilidadesIcon class="fill-black dark:fill-white"/>
         Habilidades
     </h2>
-    <div class="grid py-5 w-full h-auto gap-3 place-items-center grid-cols-3 lg:flex lg:justify-center">
-        <WindowsIcon/>
-        <LinuxIcon/>
-        <GitHubIcon width="50" height="50"/>
-        <GitIcon/>
-        <TensorFlowIcon/>
-        <PythonIcon/>
-        <MarkdownIcon/>
-        <HTML5Icon/>
-        <CSSIcon/>
-        <JavaScriptIcon/>
-        <CSharpIcon/>
-        <TailwindCSSIcon/>
-        <AstroIcon/>
-        <MySQLIcon/>
-        <MicrosoftSQLServerIcon/>
+    <div class="py-2 w-full h-auto lg:max-w-2xl"> 
+        <div id="myBtnContainer" class="flex justify-center">
+            <div class="inline-flex rounded-md shadow-sm" role="group">
+                <button class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white" onclick="filterSelection('all')">
+                    Mostrar Todo
+                </button>
+                <button class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white" onclick="filterSelection('nature')">
+                    SO
+                </button>
+                <button class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white" onclick="filterSelection('nature')">
+                    WEB
+                </button>
+                <button class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white" onclick="filterSelection('cars')">
+                    Base de Datos
+                </button>
+            </div>  
+        </div>
+        <div class="grid py-5 w-full h-auto gap-3 place-items-center grid-cols-3 lg:grid lg:grid-cols-5">
+            <SpanIcon>
+                <WindowsIcon/>
+                <h3 class="pt-1">Windows</h3>
+            </SpanIcon>
+            <SpanIcon>
+                <LinuxIcon/>
+                <h3 class="pt-1">Linux</h3>
+            </SpanIcon>
+            <SpanIcon>
+                <GitHubIcon width="50" height="50"/>
+                <h3 class="pt-1">GitHub</h3>
+            </SpanIcon>
+            <SpanIcon>
+                <GitIcon/>
+                <h3 class="pt-1">Git</h3>
+            </SpanIcon>
+            <SpanIcon>
+                <TensorFlowIcon/>
+                <h3 class="pt-1">TensorFlow</h3>
+            </SpanIcon>
+            <SpanIcon>
+                <PythonIcon/>
+                <h3 class="pt-1">Python</h3>
+            </SpanIcon>
+            <SpanIcon>
+                <MarkdownIcon class="fill-black stroke-black dark:fill-white dark:stroke-white"/>
+                <h3 class="pt-1">Markdown</h3>
+            </SpanIcon>
+            <SpanIcon>
+                <HTML5Icon/>
+                <h3 class="pt-1">HTML5</h3>
+            </SpanIcon>
+            <SpanIcon>
+                <CSSIcon/>
+                <h3 class="pt-1">CSS</h3>
+            </SpanIcon>
+            <SpanIcon>
+                <JavaScriptIcon/>
+                <h3 class="pt-1">JavaScript</h3>
+            </SpanIcon>
+            <SpanIcon>
+                <CSharpIcon/>
+                <h3 class="pt-1">C#</h3>
+            </SpanIcon>
+            <SpanIcon>
+                <TailwindCSSIcon/>
+                <h3 class="pt-1 text-xs text-center">Tailwind CSS</h3>
+            </SpanIcon>
+            <SpanIcon>
+                <AstroIcon class="fill-black dark:fill-white"/>
+                <h3 class="pt-1">Astro</h3>
+            </SpanIcon>
+            <SpanIcon>
+                <MySQLIcon/>
+                <h3 class="pt-1">MySQL</h3>
+            </SpanIcon>
+            <SpanIcon>
+                <MicrosoftSQLServerIcon/>
+                <h3 class="pt-1 text-xs text-center">Microsoft SQL Server</h3>
+            </SpanIcon>
+        </div>
     </div>
 </section>

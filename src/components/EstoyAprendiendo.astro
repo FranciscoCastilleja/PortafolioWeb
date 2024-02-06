@@ -1,4 +1,5 @@
 ---
+import SpanIcon from "./SpanIcon.astro";
 import EstoyAprendiendoIcon from "./icons/EstoyAprendiendoIcon.astro";
 import NetlifyIcon from "./icons/NetlifyIcon.astro";
 import SupabaseIcon from "./icons/SupabaseIcon.astro";
@@ -11,10 +12,22 @@ import VercelIcon from "./icons/VercelIcon.astro";
         <EstoyAprendiendoIcon class="fill-black dark:fill-white"/>
         Estoy Aprendiendo
     </h2>
-    <div class="flex py-5 w-full h-auto gap-3 justify-center">
-        <VercelIcon/>
-        <NetlifyIcon/>
-        <SupabaseIcon/>
-        <TypeScriptIcon/>
+    <div class="grid py-5 w-full h-auto grid-cols-2 gap-3 place-items-center sm:flex sm:justify-center">
+        <SpanIcon>
+            <VercelIcon class="fill-black dark:fill-white"/>
+            <h3 class="pt-1">Vercel</h3>
+        </SpanIcon>
+        <SpanIcon>
+            <NetlifyIcon/>
+            <h3 class="pt-1">Netlify</h3>
+        </SpanIcon>
+        <SpanIcon>
+            <SupabaseIcon/>
+            <h3 class="pt-1">Supabase</h3>
+        </SpanIcon>
+        <SpanIcon>
+            <TypeScriptIcon/>
+            <h3 class="pt-1">TypeScript</h3>
+        </SpanIcon>
     </div>
 </section>
