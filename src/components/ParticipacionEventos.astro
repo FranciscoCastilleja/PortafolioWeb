@@ -1,13 +1,14 @@
 ---
+import Section from "./Section.astro";
 import ParticipacionEventosIcon from "./icons/ParticipacionEventosIcon.astro";
 ---
 
-<section id="participacioneventos" class="grid mt-20 py-10 w-4/5 h-auto place-items-center">
+<Section id="participacioneventos">
     <h2 class="flex pb-1 text-xl font-bold items-center gap-x-1">
         <ParticipacionEventosIcon class="fill-black dark:fill-white"/>
         Participación en Eventos
     </h2>
-    <div class="py-2 w-full h-auto lg:max-w-2xl"> 
+    <div class="py-5 w-full h-auto lg:max-w-2xl"> 
         <ol class="relative border-s border-gray-700 dark:border-gray-100">                  
             <li class="mb-10 ms-6">            
                 <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-purple-900">
@@ -39,4 +40,4 @@ import ParticipacionEventosIcon from "./icons/ParticipacionEventosIcon.astro";
             </li>
         </ol>
     </div>
-</section>
+</Section>

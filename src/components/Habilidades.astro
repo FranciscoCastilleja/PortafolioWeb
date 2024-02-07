@@ -16,91 +16,139 @@ import AstroIcon from "./icons/AstroIcon.astro";
 import MySQLIcon from "./icons/MySQLIcon.astro";
 import MicrosoftSQLServerIcon from "./icons/MicrosoftSQLServerIcon.astro";
 import SpanIcon from "./SpanIcon.astro";
+import Section from "./Section.astro";
 ---
 
-<section id="habilidades" class="grid mt-20 py-10 w-4/5 h-auto place-items-center">
+<Section id="habilidades">
     <h2 class="flex pb-1 text-xl font-bold items-center gap-x-1">
         <HabilidadesIcon class="fill-black dark:fill-white"/>
         Habilidades
     </h2>
-    <div class="py-2 w-full h-auto lg:max-w-2xl"> 
+    <div class="py-5 w-full h-auto lg:max-w-2xl"> 
         <div id="myBtnContainer" class="flex justify-center">
             <div class="inline-flex rounded-md shadow-sm" role="group">
-                <button class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white" onclick="filterSelection('all')">
+                <button id="btn_all" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
                     Mostrar Todo
                 </button>
-                <button class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white" onclick="filterSelection('nature')">
+                <button id="btn_so" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
                     SO
                 </button>
-                <button class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white" onclick="filterSelection('nature')">
+                <button id="btn_web" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
                     WEB
                 </button>
-                <button class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white" onclick="filterSelection('cars')">
+                <button id="btn_bd" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
                     Base de Datos
                 </button>
             </div>  
         </div>
         <div class="grid py-5 w-full h-auto gap-3 place-items-center grid-cols-3 lg:grid lg:grid-cols-5">
-            <SpanIcon>
+            <SpanIcon id="span_all so">
                 <WindowsIcon/>
                 <h3 class="pt-1">Windows</h3>
             </SpanIcon>
-            <SpanIcon>
+            <SpanIcon id="span_all so">
                 <LinuxIcon/>
                 <h3 class="pt-1">Linux</h3>
             </SpanIcon>
-            <SpanIcon>
+            <SpanIcon id="span_all">
                 <GitHubIcon width="50" height="50"/>
                 <h3 class="pt-1">GitHub</h3>
             </SpanIcon>
-            <SpanIcon>
+            <SpanIcon id="span_all">
                 <GitIcon/>
                 <h3 class="pt-1">Git</h3>
             </SpanIcon>
-            <SpanIcon>
+            <SpanIcon id="span_all">
                 <TensorFlowIcon/>
                 <h3 class="pt-1">TensorFlow</h3>
             </SpanIcon>
-            <SpanIcon>
+            <SpanIcon id="span_all">
                 <PythonIcon/>
                 <h3 class="pt-1">Python</h3>
             </SpanIcon>
-            <SpanIcon>
+            <SpanIcon id="span_all">
                 <MarkdownIcon class="fill-black stroke-black dark:fill-white dark:stroke-white"/>
                 <h3 class="pt-1">Markdown</h3>
             </SpanIcon>
-            <SpanIcon>
+            <SpanIcon id="span_all web">
                 <HTML5Icon/>
                 <h3 class="pt-1">HTML5</h3>
             </SpanIcon>
-            <SpanIcon>
+            <SpanIcon id="span_all web">
                 <CSSIcon/>
                 <h3 class="pt-1">CSS</h3>
             </SpanIcon>
-            <SpanIcon>
+            <SpanIcon id="span_all web">
                 <JavaScriptIcon/>
                 <h3 class="pt-1">JavaScript</h3>
             </SpanIcon>
-            <SpanIcon>
+            <SpanIcon id="span_all">
                 <CSharpIcon/>
                 <h3 class="pt-1">C#</h3>
             </SpanIcon>
-            <SpanIcon>
+            <SpanIcon id="span_all web">
                 <TailwindCSSIcon/>
                 <h3 class="pt-1 text-xs text-center">Tailwind CSS</h3>
             </SpanIcon>
-            <SpanIcon>
+            <SpanIcon id="span_all web">
                 <AstroIcon class="fill-black dark:fill-white"/>
                 <h3 class="pt-1">Astro</h3>
             </SpanIcon>
-            <SpanIcon>
+            <SpanIcon id="span_all bd">
                 <MySQLIcon/>
                 <h3 class="pt-1">MySQL</h3>
             </SpanIcon>
-            <SpanIcon>
+            <SpanIcon id="span_all bd">
                 <MicrosoftSQLServerIcon/>
                 <h3 class="pt-1 text-xs text-center">Microsoft SQL Server</h3>
             </SpanIcon>
         </div>
     </div>
-</section>
+</Section>
+
+<script>
+    filtro(".span_all")
+    function filtro(c:string) {
+        let x, i;
+        x = document.querySelectorAll('.span_all');
+        for (i = 0; i < x.length; i++) {
+            DisplayElement(x[i] as HTMLElement, c);
+        }
+    }
+
+    function DisplayElement(element:HTMLElement, name:string) {
+        let i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(".")[1];
+        for (i = 0; i < arr1.length; i++) {
+            if (arr1[i] == arr2) {
+                element.classList.remove('hidden');
+                element.classList.add('grid')
+                return;
+            }
+        }
+        element.classList.add('hidden');
+        element.classList.remove('grid')
+    }
+
+    let btn_all = document.getElementById('btn_all') as HTMLButtonElement;
+    let btn_os = document.getElementById('btn_so') as HTMLButtonElement;
+    let btn_web = document.getElementById('btn_web') as HTMLButtonElement;
+    let btn_bd = document.getElementById('btn_bd') as HTMLButtonElement;
+
+    btn_all.addEventListener('click', () => {
+        filtro(".span_all")
+    });
+
+    btn_os.addEventListener('click', () => {
+        filtro(".so")
+    });
+
+    btn_web.addEventListener('click', () => {
+        filtro(".web")
+    });
+
+    btn_bd.addEventListener('click', () => {
+        filtro(".bd")
+    });
+</script>

@@ -1,8 +1,9 @@
 ---
+import Section from "./Section.astro";
 import ContactoIcon from "./icons/ContactoIcon.astro";
 ---
 
-<section id="contacto" class="grid mt-20 py-10 w-4/5 h-auto place-items-center">
+<Section id="contacto">
     <h2 class="flex pb-1 text-xl font-bold items-center gap-x-1">
         <ContactoIcon class="fill-black dark:fill-white"/>
         Contacto
@@ -33,4 +34,4 @@ import ContactoIcon from "./icons/ContactoIcon.astro";
             <button type="submit" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">Enviar</button>
         </form>  
     </div>
-</section>
+</Section>

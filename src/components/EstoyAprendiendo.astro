@@ -1,4 +1,5 @@
 ---
+import Section from "./Section.astro";
 import SpanIcon from "./SpanIcon.astro";
 import EstoyAprendiendoIcon from "./icons/EstoyAprendiendoIcon.astro";
 import NetlifyIcon from "./icons/NetlifyIcon.astro";
@@ -7,7 +8,7 @@ import TypeScriptIcon from "./icons/TypeScriptIcon.astro";
 import VercelIcon from "./icons/VercelIcon.astro";
 ---
 
-<section id="estoyaprendiendo" class="grid mt-20 py-10 w-4/5 h-auto place-items-center">
+<Section id="estoyaprendiendo">
     <h2 class="flex pb-1 text-xl font-bold items-center gap-x-1">
         <EstoyAprendiendoIcon class="fill-black dark:fill-white"/>
         Estoy Aprendiendo
@@ -30,4 +31,4 @@ import VercelIcon from "./icons/VercelIcon.astro";
             <h3 class="pt-1">TypeScript</h3>
         </SpanIcon>
     </div>
-</section>
+</Section>

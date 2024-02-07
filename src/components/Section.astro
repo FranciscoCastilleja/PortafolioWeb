@@ -1,0 +1,11 @@
+---
+interface Props {
+    id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<section id={id} class="grid mt-20 py-10 w-4/5 h-auto place-items-center">
+    <slot/>
+</section>
