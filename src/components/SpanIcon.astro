@@ -1,11 +1,7 @@
 ---
-interface Props {
-    id?: string;
-}
 
-const { id } = Astro.props;
 ---
 
-<span class=`grid p-3 w-auto rounded-lg place-items-center border-black border-2 hover:scale-105 dark:border-white ${id}`>
+<span class='grid p-3 w-auto place-items-center hover:scale-105'>
     <slot/>
 </span>
