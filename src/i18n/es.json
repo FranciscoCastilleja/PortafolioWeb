@@ -1,5 +1,6 @@
 {
     "Title": "Portafolio Web | Francisco Castilleja | Ingeniero en Sistemas Computacionales",
+    "Description": "Bienvenido a mi portafolio web, donde podrás explorar mis proyectos y logros. Descubre mi experiencia y habilidades en el mundo de la tecnología.",
     "Menu_OP_1": "Inicio", 
     "Menu_OP_2": "Experiencia", 
     "Menu_OP_3": "Eventos",
@@ -9,5 +10,8 @@
     "Menu_OP_7": "Sobre Mí",
     "Menu_OP_8": "Estudios",
     "Menu_OP_9": "Contacto",
-    "Menu_OP_10": "Idioma"       
+    "Menu_OP_10": "Idioma",
+    "Header_1": "Hola, Soy Francisco Castilleja",
+    "Span_Header_1": "Disponible para trabajar",
+    "Paragraph_1": "Ingeniero en Sistemas Computacionales | 1 año como Desarrollador Web (Front-End) | Desarrollador de Software | Inteligencia Artificial."   
 }

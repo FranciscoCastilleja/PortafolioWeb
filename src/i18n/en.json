@@ -1,5 +1,6 @@
 {
     "Title": "Web Portfolio | Francisco Castilleja | Computer Systems Engineer",
+    "Description": "Welcome to my web portfolio, where you can explore my projects and achievements. Discover my experience and skills in the world of technology.",
     "Menu_OP_1": "Home", 
     "Menu_OP_2": "Experience", 
     "Menu_OP_3": "Events",
@@ -9,5 +10,8 @@
     "Menu_OP_7": "About Me",
     "Menu_OP_8": "Studies",
     "Menu_OP_9": "Contact",
-    "Menu_OP_10": "Language"       
+    "Menu_OP_10": "Language",
+    "Header_1": "Hi, i'm Francisco Castilleja",
+    "Span_Header_1": "Available to work",
+    "Paragraph_1": "Computer Systems Engineer | 1 year as a Web Developer (Front-End) | Software Developer | Artificial Intelligence."   
 }

@@ -16,7 +16,7 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale })
 ---
 
-<Layout title={i18n.Title} description="Contratame">
+<Layout title={i18n.Title} description={i18n.Description}>
 	<Header/>
 	<main id="inicio" class="grid w-full h-auto place-items-center">
 		<Inicio/>
