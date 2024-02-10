@@ -9,20 +9,24 @@ import SobreMiIcon from './icons/SobreMiIcon.astro'
 import EstudiosIcon from './icons/EstudiosIcon.astro'
 import ContactoIcon from './icons/ContactoIcon.astro'
 import IdiomaIcon from './icons/IdiomaIcon.astro'
+
+import { getI18N } from '../i18n/';
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale })
 ---
 
 <header class="grid fixed mt-2 w-full h-10 place-items-center z-10">
     <nav class="hidden py-1 px-2 size-auto text-white bg-slate-800 rounded-lg lg:inline">
-        <a href="#inicio" class="p-1 hover:bg-purple-900 hover:rounded-lg">Inicio</a>
-        <a href="#experiencia" class="p-1 hover:bg-purple-900 hover:rounded-lg">Experiencia</a>
-        <a href="#participacioneventos" class="p-1 hover:bg-purple-900 hover:rounded-lg">Participación en Eventos</a>
-        <a href="#proyectos" class="p-1 hover:bg-purple-900 hover:rounded-lg">Proyectos</a>
-        <a href="#habilidades" class="p-1 hover:bg-purple-900 hover:rounded-lg">Habilidades</a>
-        <a href="#estoyaprendiendo" class="p-1 hover:bg-purple-900 hover:rounded-lg">Estoy Aprendiendo</a>
-        <a href="#sobremi" class="p-1 hover:bg-purple-900 hover:rounded-lg">Sobre Mí</a>
-        <a href="#estudios" class="p-1 hover:bg-purple-900 hover:rounded-lg">Estudios</a>
-        <a href="#contacto" class="p-1 hover:bg-purple-900 hover:rounded-lg">Contacto</a>
-        <a href="" class="p-1 hover:bg-purple-900 hover:rounded-lg">Idioma</a>
+        <a href="#inicio" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_1}</a>
+        <a href="#experiencia" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_2}</a>
+        <a href="#participacioneventos" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_3}</a>
+        <a href="#proyectos" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_4}</a>
+        <a href="#habilidades" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_5}</a>
+        <a href="#estoyaprendiendo" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_6}</a>
+        <a href="#sobremi" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_7}</a>
+        <a href="#estudios" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_8}</a>
+        <a href="#contacto" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_9}</a>
+        <a href="" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_10}</a>
     </nav>
     <nav class="flex py-1 px-2 size-auto bg-violet-950 rounded-lg lg:hidden">
         <a href="#inicio" class="block p-2 hover:bg-purple-900 hover:rounded-lg">

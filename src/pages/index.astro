@@ -1,28 +1,5 @@
 ---
-import Contacto from '../components/Contacto.astro';
-import EstoyAprendiendo from '../components/EstoyAprendiendo.astro';
-import Estudios from '../components/Estudios.astro';
-import Experiencia from '../components/Experiencia.astro';
-import Habilidades from '../components/Habilidades.astro';
-import Header from '../components/Header.astro';
-import Inicio from '../components/Inicio.astro';
-import ParticipacionEventos from '../components/ParticipacionEventos.astro';
-import Proyectos from '../components/Proyectos.astro';
-import SobreMi from '../components/SobreMi.astro';
-import Layout from '../layouts/Layout.astro';
+import App from '../components/App.astro';
 ---
 
-<Layout title="Portafolio Web | Francisco Castilleja | Ingeniero en Sistemas Computacionales" description="Contratame">
-	<Header/>
-	<main id="inicio" class="grid w-full h-auto place-items-center">
-		<Inicio/>
-		<Experiencia/>
-		<ParticipacionEventos/>
-		<Proyectos/>
-		<Habilidades/>
-		<EstoyAprendiendo/>
-		<SobreMi/>
-		<Estudios/>
-		<Contacto/>
-	</main>
-</Layout>
+<App/>
