@@ -9,6 +9,8 @@ import SobreMiIcon from './icons/SobreMiIcon.astro'
 import EstudiosIcon from './icons/EstudiosIcon.astro'
 import ContactoIcon from './icons/ContactoIcon.astro'
 import IdiomaIcon from './icons/IdiomaIcon.astro'
+import EsMxIcon from './icons/EsMxIcon.astro'
+import EnUsIcon from './icons/EnUsIcon.astro'
 
 import { getI18N } from '../i18n/';
 const { currentLocale } = Astro;
@@ -16,7 +18,7 @@ const i18n = getI18N({ currentLocale })
 ---
 
 <header class="grid fixed mt-2 w-full h-10 place-items-center z-10">
-    <nav class="hidden py-1 px-2 size-auto text-white bg-slate-800 rounded-lg lg:inline">
+    <nav id="nav_1" class="hidden py-1 px-2 size-auto text-white bg-slate-800 rounded-lg lg:inline">
         <a href="#inicio" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_1}</a>
         <a href="#experiencia" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_2}</a>
         <a href="#participacioneventos" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_3}</a>
@@ -26,9 +28,9 @@ const i18n = getI18N({ currentLocale })
         <a href="#sobremi" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_7}</a>
         <a href="#estudios" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_8}</a>
         <a href="#contacto" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_9}</a>
-        <a href="" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_10}</a>
+        <button class="p-1 hover:bg-purple-900 hover:rounded-lg" onclick="document.getElementById('Lang_Ops').classList.toggle('hidden')">{i18n.Menu_OP_10}</button>
     </nav>
-    <nav class="flex py-1 px-2 size-auto bg-violet-950 rounded-lg lg:hidden">
+    <nav id="nav_2" class="flex py-1 px-2 size-auto bg-slate-800 rounded-lg lg:hidden">
         <a href="#inicio" class="block p-2 hover:bg-purple-900 hover:rounded-lg">
             <HomeIcon class="fill-white"/>
         </a>
@@ -56,10 +58,24 @@ const i18n = getI18N({ currentLocale })
         <a href="#contacto" class="p-2 hover:bg-purple-900 hover:rounded-lg">
             <ContactoIcon class="fill-white"/>
         </a>
-        <a href="" class="p-2 hover:bg-purple-900 hover:rounded-lg">
+        <button class="p-2 hover:bg-purple-900 hover:rounded-lg" onclick="document.getElementById('Lang_Ops').classList.toggle('hidden')">
             <IdiomaIcon class="fill-white"/>
-        </a>
+        </button>
     </nav>
+    <div id="Lang_Ops" class="hidden absolute p-3 top-12 bg-slate-800 rounded-lg">
+        <a href="/" class="hidden p-1 gap-x-3 rounded-lg lg:flex hover:bg-slate-600">
+            {i18n.Menu_OP_10_es}
+        </a>
+        <a href="/en" class="hidden p-1 gap-x-3 rounded-lg lg:flex hover:bg-slate-600">
+            {i18n.Menu_OP_10_en}
+        </a>
+        <a href="/" class="flex p-1 gap-x-3 rounded-lg lg:hidden hover:bg-slate-600">
+            <EsMxIcon width="25" height="25"/>
+        </a>
+        <a href="/en" class="flex p-1 gap-x-3 rounded-lg lg:hidden hover:bg-slate-600">
+            <EnUsIcon width="25" height="25"/>
+        </a>
+    </div>
 </header>
 
 <script>
@@ -84,4 +100,26 @@ const i18n = getI18N({ currentLocale })
 			});
 		});
 	});
+</script>
+
+<script>
+    let LangOps = document.getElementById("Lang_Ops") as HTMLElement;
+    let nav1 = document.getElementById('nav_1') as HTMLElement;
+    let nav2 = document.getElementById('nav_2') as HTMLElement;
+    let btn1 = nav1.querySelector('button') as HTMLButtonElement;
+    let btn2 = nav2.querySelector('button') as HTMLButtonElement;
+
+    function CheckMenu() {
+        let n1 = nav1.getBoundingClientRect().width;
+        let n2 = nav2.getBoundingClientRect().width;
+        if (n1 == 0) { 
+            let l1 = btn2.getBoundingClientRect().left;
+            LangOps.style.left = (l1 - 10).toString() + "px";
+        } else if (n2 == 0) {
+            let l2 = btn1.getBoundingClientRect().left;
+            LangOps.style.left = (l2 - 3).toString() + "px";
+        }
+    }
+
+    setInterval(CheckMenu, 1)
 </script>

@@ -6,7 +6,7 @@ import TabletIcon from './icons/TabletIcon.astro';
 import MobilIcon from './icons/MobilIcon.astro';
 ---
 
-<div id="Panel" class="hidden fixed w-4/5 h-4/5 top-24 bg-gray-200 opacity-95 rounded-xl shadow-lg shadow-purple-900 sm:w-6/12 dark:bg-slate-900">
+<div id="Panel" class="hidden fixed w-4/5 h-4/5 top-24 bg-gray-200 opacity-95 rounded-xl shadow-lg shadow-purple-900 md:w-6/12 dark:bg-slate-900">
     <button id="Button" type="button" class="flex group mt-4 mr-4 size-10 float-right justify-center items-center bg-gray-300 rounded-full hover:border-2 hover:border-purple-900 hover:stroke-purple-900 dark:bg-slate-800">
         <CerrarIcon width="15" height="15" class="group-hover:stroke-purple-950 dark:group-hover:stroke-purple-500"/>
     </button>
@@ -26,23 +26,23 @@ import MobilIcon from './icons/MobilIcon.astro';
             </button>
         </div>
         <div id="desktop" class="block w-full h-96">
-            <div class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[16px] rounded-t-xl h-[172px] max-w-[301px] md:w-full">
+            <div class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[16px] rounded-t-xl h-[172px] max-w-[301px] lg:max-w-[450px] lg:h-[300px]">
                 <div class="rounded-xl overflow-hidden h-[140px] md:h-[262px]">
-                    <img src="../../public/media/Desktop-Laptop-MisIdeas.webp" class="dark:hidden h-[140px] w-full rounded-xl" alt="">
-                    <img src="../../public/media/Desktop-Laptop-MisIdeas.webp" class="hidden dark:block h-[140px] w-full rounded-xl" alt="">
+                    <img src="../../public/media/Desktop-Laptop-MisIdeas.webp" class="dark:hidden h-[140px] w-full rounded-xl lg:h-[250px]" alt="">
+                    <img src="../../public/media/Desktop-Laptop-MisIdeas.webp" class="hidden dark:block h-[140px] w-full rounded-xl lg:h-[250px]" alt="">
                 </div>
             </div>
-            <div class="relative mx-auto bg-gray-900 dark:bg-gray-700 rounded-b-xl h-[24px] max-w-[301px] md:w-full"></div>
+            <div class="relative mx-auto bg-gray-900 dark:bg-gray-700 rounded-b-xl h-[24px] max-w-[301px] lg:max-w-[450px]"></div>
             <div class="relative mx-auto bg-gray-800 rounded-b-xl h-[55px] max-w-[83px] md:w-full"></div>
         </div>
         <div id="laptop" class="hidden w-full h-96">
-            <div class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:w-10/12">
-                <div class="rounded-lg overflow-hidden h-[156px] bg-white dark:bg-gray-800">
-                    <img src="../../public/media/Desktop-Laptop-MisIdeas.webp" class="dark:hidden h-[156px] w-full rounded-xl" alt="">
-                    <img src="../../public/media/Desktop-Laptop-MisIdeas.webp" class="hidden dark:block h-[156px] w-full rounded-lg" alt="">
+            <div class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[172px] max-w-[301px] lg:max-w-[400px] lg:h-[250px]">
+                <div class="rounded-lg overflow-hidden h-[156px] bg-white dark:bg-gray-800 lg:h-[255px]">
+                    <img src="../../public/media/Desktop-Laptop-MisIdeas.webp" class="dark:hidden h-[156px] w-full rounded-xl lg:h-[225px]" alt="">
+                    <img src="../../public/media/Desktop-Laptop-MisIdeas.webp" class="hidden dark:block h-[156px] w-full rounded-lg lg:h-[225px]" alt="">
                 </div>
             </div>
-            <div class="relative mx-auto bg-gray-900 dark:bg-gray-700 rounded-b-xl rounded-t-sm h-[17px] max-w-[351px] md:w-11/12">
+            <div class="relative mx-auto bg-gray-900 dark:bg-gray-700 rounded-b-xl rounded-t-sm h-[17px] max-w-[351px] lg:max-w-[440px]">
                 <div class="absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl w-[56px] h-[5px] md:w-[96px] md:h-[8px] bg-gray-800"></div>
             </div>
         </div>

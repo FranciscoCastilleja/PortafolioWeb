@@ -6,12 +6,16 @@ import NetlifyIcon from "./icons/NetlifyIcon.astro";
 import SupabaseIcon from "./icons/SupabaseIcon.astro";
 import TypeScriptIcon from "./icons/TypeScriptIcon.astro";
 import VercelIcon from "./icons/VercelIcon.astro";
+
+import { getI18N } from '../i18n/';
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale })
 ---
 
 <Section id="estoyaprendiendo">
     <h2 class="flex pb-1 text-xl font-bold items-center gap-x-1">
         <EstoyAprendiendoIcon class="fill-black dark:fill-white"/>
-        Estoy Aprendiendo
+        {i18n.Menu_OP_6}
     </h2>
     <div class="grid py-5 w-full h-auto grid-cols-2 gap-3 place-items-center sm:flex sm:justify-center">
         <SpanIcon>

@@ -10,12 +10,16 @@ import ProyectosIcon from "./icons/ProyectosIcon.astro";
 import TailwindCSSIcon from "./icons/TailwindCSSIcon.astro";
 import ExternalLinkIcon from "./icons/ExternalLinkIcon.astro";
 import MostrarProyecto from "./MostrarProyecto.astro";
+
+import { getI18N } from '../i18n/';
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale })
 ---
 
 <Section id="proyectos">
     <h2 class="flex pb-1 text-xl font-bold items-center gap-x-1">
         <ProyectosIcon class="fill-black dark:fill-white"/>
-        Proyectos
+        {i18n.Menu_OP_4}
     </h2>
     <div class="py-5 w-full h-auto lg:max-w-2xl"> 
         <div class="grid my-2 p-2 place-items-center gap-3 md:grid-cols-2 lg:grid-cols-1">
@@ -23,8 +27,8 @@ import MostrarProyecto from "./MostrarProyecto.astro";
                 <img class="rounded-t-lg zoom" src="../../public/media/MisIdeas-IMG-1.webp" alt="" />
                 <div class="p-5">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Mis Ideas</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Sitio Web donde comparto ideas que me surgen relacionadas con el desarrollo web.</p>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Si deseas también puedes compartir tus ideas.</p>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{i18n.P_1_Description_1}</p>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{i18n.P_1_Description_2}</p>
                     <span class="flex mb-3 py-1 gap-x-1">
                         <AstroIcon class="fill-black dark:fill-white" width="25" height="25"/>
                         <HTML5Icon width="25" height="25"/>
@@ -42,7 +46,7 @@ import MostrarProyecto from "./MostrarProyecto.astro";
                         </a>
                     </span>
                     <button id="show" type="button" class="inline-flex cursor-pointer items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
-                        Ver Más
+                        {i18n.P_Button}
                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                         </svg>

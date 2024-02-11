@@ -1,12 +1,16 @@
 ---
 import Section from "./Section.astro";
 import ExperienciaIcon from "./icons/ExperienciaIcon.astro";
+
+import { getI18N } from '../i18n/';
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale })
 ---
 
 <Section id="experiencia">
     <h2 class="flex pb-1 text-xl font-bold items-center gap-x-1">
         <ExperienciaIcon class="fill-black dark:fill-white"/>
-        Experiencia
+        {i18n.Menu_OP_2}
     </h2>
     <div class="py-5 w-full h-auto lg:max-w-2xl"> 
         <ol class="relative border-s border-gray-700 dark:border-gray-100">                  
@@ -16,9 +20,9 @@ import ExperienciaIcon from "./icons/ExperienciaIcon.astro";
                         <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                     </svg>
                 </span>
-                <h3 class="flex items-center mb-1 text-lg font-semibold text-black dark:text-white">Proyecto de Investigación <span class="bg-purple-100 text-purple-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300 ms-3">Más Reciente</span></h3>
-                <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-400">2023 - Actualmente</time>
-                <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Desarrollo de la tésis "Comunicación Inclusiva: Integrando Señas y Tecnología para la Participación Plena de Personas con Discapacidad Auditiva". La herramienta desarrollada tiene como objetivo proporcionar una comunicación inclusiva a las personas con discapacidad auditiva.</p>
+                <h3 class="flex items-center mb-1 text-lg font-semibold text-black dark:text-white">{i18n.Exp_1_Header} <span class="bg-purple-100 text-purple-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300 ms-3">{i18n.Exp_Span}</span></h3>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-400">2023 - {i18n.Exp_Date_Now}</time>
+                <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">{i18n.Exp_1_Description}</p>
             </li>
             <li class="mb-10 ms-6">
                 <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-purple-900">
@@ -26,9 +30,9 @@ import ExperienciaIcon from "./icons/ExperienciaIcon.astro";
                         <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                     </svg>
                 </span>
-                <h3 class="flex items-center mb-1 text-lg font-semibold text-black dark:text-white">Sitio Web _MarvelKnight_ <span class="bg-purple-100 text-purple-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300 ms-3">Más Reciente</span></h3>
-                <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-400">23 diciembre 2022 - Actualmente</time>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">Desarrollo de un proyecto personal enfocado en el Multiverso de Marvel, el cuál se enfoca en brindar a los fans una forma clara de seguir el orden cronológico, entre otras cosas.</p>
+                <h3 class="flex items-center mb-1 text-lg font-semibold text-black dark:text-white">{i18n.Exp_2_Header} _MarvelKnight_ <span class="bg-purple-100 text-purple-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300 ms-3">{i18n.Exp_Span}</span></h3>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-400">{i18n.Exp_2_Date} - {i18n.Exp_Date_Now}</time>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">{i18n.Exp_2_Description}</p>
             </li>
             <li class="mb-10 ms-6">
                 <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-purple-900">
@@ -36,10 +40,9 @@ import ExperienciaIcon from "./icons/ExperienciaIcon.astro";
                         <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                     </svg>
                 </span>
-                <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Participación en el Programa Delfín - Verano de la Investigación Científica y Tecnológica del Pacífico</h3>
-                <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-400">19 junio 2023 - 4 agosto 2023</time>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">Participé en la invetigación y desarrollo del proyecto "SISTEMA DE INTERPRETACIÓN DE LENGUA
-                    DE SEÑAS MEXICANA PARA PROFESIONALES DE LA SALUD".</p>
+                <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">{i18n.Exp_3_Header}</h3>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-400">{i18n.Exp_3_Date}</time>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">{i18n.Exp_3_Description}</p>
             </li>
         </ol>
     </div>
