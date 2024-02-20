@@ -82,5 +82,19 @@
     "Resume_EX_Description_3_1" : "Conferencia sobre los puntos importantes relacionados al Proyecto de Investigación.",
     "Resume_EX_Description_3_2" : "Se informó sobre como las personas con discapacidad auditiva afrontan dificultades, la importancia de estar bien informados sobre como actuar para que haya una mejor inclusión en la sociedad y sobre los objetivos relacionados con el desarrollo de la herramienta.",
     "Resume_EX_Description_3_3" : "La conferencia fue dirigida a estudiantes de la Universidad Autónoma de Tamaulipas, de la Facultad de Reynosa. Dicha conferencia fue parte de la semana académica de Ing. en Sistemas Computacionales.",
-    "Resume_ED" : "EDUCACIÓN"
+    "Resume_ED" : "EDUCACIÓN",
+    "Resume_ED_Description" : "Durante mis estudios adquirí conocimientos relacionados con el desarrollo de software, desarrollo web, inteligencia artificial, redes, automatización, entre otros.",
+    "Resume_INF" : "INFORMACIÓN",
+    "Resume_INF_SSkills" : "HABILIDADES BLANDAS",
+    "Resume_INF_Twork" : "Trabajo en equipo",
+    "Resume_INF_PRes" : "Resolución de problemas",
+    "Resume_INF_Creat" : "Creatividad",
+    "Resume_INF_CLearn" : "Aprendizaje continuo",
+    "Resume_INF_HSkills" : "HABILIDADES DURAS",
+    "Resume_LAN_ES" : "Español - Nativo",
+    "Resume_LAN_EN" : "Inglés - Básico",
+    "Link_Index" : "/",
+    "Link_PDF" : "Resume-FranciscoCastilleja-ES.pdf",
+    "Link_PNG_1" : "Resume-FranciscoCastilleja-1-ES.png",
+    "Link_PNG_2" : "Resume-FranciscoCastilleja-2-ES.png"
 }

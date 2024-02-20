@@ -82,5 +82,19 @@
     "Resume_EX_Description_3_1" : "Conference on key points related to the Research Project.",
     "Resume_EX_Description_3_2" : "The conference addressed the challenges faced by individuals with hearing impairments, emphasized the importance of being well-informed on how to promote better inclusion in society, and outlined the objectives related to the development of the tool.",
     "Resume_EX_Description_3_3" : "The conference was directed towards students at the Autonomous University of Tamaulipas, specifically those from the Faculty of Reynosa. This presentation was included as part of the academic week for the Computer Systems Engineering program.",
-    "Resume_ED" : "EDUCATION"
+    "Resume_ED" : "EDUCATION",
+    "Resume_ED_Description" : "During my studies, I acquired knowledge related to software development, web development, artificial intelligence, networks, automation, among other areas.",
+    "Resume_INF" : "INFORMATION",
+    "Resume_INF_SSkills" : "SOFT SKILLS",
+    "Resume_INF_Twork" : "Teamwork",
+    "Resume_INF_PRes" : "Problem resolution",
+    "Resume_INF_Creat" : "Creativity",
+    "Resume_INF_CLearn" : "Continuous learning",
+    "Resume_INF_HSkills" : "HARD SKILLS",
+    "Resume_LAN_ES" : "Spanish - Native",
+    "Resume_LAN_EN" : "English - Basic",
+    "Link_Index" : "/en",
+    "Link_PDF" : "Resume-FranciscoCastilleja-EN.pdf",
+    "Link_PNG_1" : "Resume-FranciscoCastilleja-1-EN.png",
+    "Link_PNG_2" : "Resume-FranciscoCastilleja-2-EN.png"
 }

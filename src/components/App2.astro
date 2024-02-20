@@ -57,24 +57,24 @@ const i18n = getI18N({ currentLocale })
             <div class="w-full h-auto">
                 <h5 class="my-2 text-lg font-bold">UNIVERSIDAD AUTÓNOMA DE TAMAULIPAS</h5>
                 <h6 class="my-2 text-base">Facultad de Medicina e Ingeniería en Sistemas Computacionales de Matamoros</h6>
-                <h6 class="my-2 text-base">Ingeniero en Sistemas Computacionales (Titulo en Proceso)</h6>
+                <h6 class="my-2 text-base">{i18n.EC_Description} ({i18n.EC_Title})</h6>
                 <h6 class="my-2 text-base">2019 - 2023</h6>
-                <p class="mb-2">Durante mis estudios adquirí conocimientos relacionados con el desarrollo de software, desarrollo web, inteligencia artificial, redes, automatización, entre otros.</p>
+                <p class="mb-2">{i18n.Resume_ED_Description}</p>
             </div>
         </div>
         <div class="m-3 px-5 text-black rounded-md bg-gray-300 col-span-2 row-auto sm:col-span-4 md:col-span-5 lg:col-span-6">
-            <h2 class="my-3 text-3xl">INFORMACIÓN</h2>
+            <h2 class="my-3 text-3xl">{i18n.Resume_INF}</h2>
             <div class="w-full h-auto">
                 <hr>
-                <p class="my-3 text-lg">HABILIDADES BLANDAS</p>
+                <p class="my-3 text-lg">{i18n.Resume_INF_SSkills}</p>
                 <span class="grid gap-x-3 grid-cols-2 md:flex">
-                    <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">Trabajo en equipo</p>
-                    <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">Resolución de problemas</p>
-                    <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">Creatividad</p>
-                    <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">Aprendizaje continuo</p>
+                    <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">{i18n.Resume_INF_Twork}</p>
+                    <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">{i18n.Resume_INF_PRes}</p>
+                    <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">{i18n.Resume_INF_Creat}</p>
+                    <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">{i18n.Resume_INF_CLearn}</p>
                 </span>
                 <hr>
-                <p class="my-3 text-lg">HABILIDADES DURAS</p>
+                <p class="my-3 text-lg">{i18n.Resume_INF_HSkills}</p>
                 <span class="grid gap-x-3 grid-cols-2 md:flex">
                     <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">HTML</p>
                     <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">CSS</p>
@@ -88,13 +88,13 @@ const i18n = getI18N({ currentLocale })
                     <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">Microsoft SQL Server</p>
                 </span>
                 <hr>
-                <p class="my-3 text-lg">IDIOMAS</p>
+                <p class="my-3 text-lg">{i18n.Menu_OP_10.toUpperCase()}S</p>
                 <span class="flex gap-x-3">
-                    <p class="my-1 p-1 border border-gray-800 rounded-lg">Español - Nativo</p>
-                    <p class="my-1 p-1 border border-gray-800 rounded-lg">Inglés - Básico</p>
+                    <p class="my-1 p-1 border border-gray-800 rounded-lg">{i18n.Resume_LAN_ES}</p>
+                    <p class="my-1 p-1 border border-gray-800 rounded-lg">{i18n.Resume_LAN_EN}</p>
                 </span>
                 <hr class="w-11/12">
-                <p class="my-3 text-lg">CONTACTO</p>
+                <p class="my-3 text-lg">{i18n.Menu_OP_9.toUpperCase()}</p>
                 <p class="my-1">Francisco_Castilleja@outlook.com</p>
                 <p class="my-1">8681581653</p>
                 <p class="my-1">linkedin.com/in/francisco-castilleja</p>
@@ -104,7 +104,7 @@ const i18n = getI18N({ currentLocale })
 
         <div data-dial-init class="fixed end-6 bottom-6 group">
             <div id="speed-dial-menu-click" class="flex-col items-center hidden mb-4 space-y-2">
-                <button id="btn_back" type="button" data-tooltip-target="tooltip-print" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-600 hover:text-gray-900 bg-purple-300 rounded-full border border-purple-200 dark:border-purple-600 shadow-sm dark:hover:text-white dark:text-gray-300 hover:bg-purple-100 dark:bg-purple-700 dark:hover:bg-purple-600 focus:ring-4 focus:ring-purple-300 focus:outline-none dark:focus:ring-purple-400">
+                <button id="btn_back" value={i18n.Link_Index} type="button" data-tooltip-target="tooltip-print" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-600 hover:text-gray-900 bg-purple-300 rounded-full border border-purple-200 dark:border-purple-600 shadow-sm dark:hover:text-white dark:text-gray-300 hover:bg-purple-100 dark:bg-purple-700 dark:hover:bg-purple-600 focus:ring-4 focus:ring-purple-300 focus:outline-none dark:focus:ring-purple-400">
                     <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M15 6l-6 6l6 6" />
@@ -120,17 +120,21 @@ const i18n = getI18N({ currentLocale })
                         <path d="M20 15h-3v6" />
                         <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
                     </svg>
+                    <a id="a_pdf" class="hidden" href=`/public/media/${i18n.Link_PDF}` download={i18n.Link_PDF}></a>
                 </button>
-                <button id="btn_png" type="button" data-tooltip-target="tooltip-copy" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-600 hover:text-gray-900 bg-purple-300 rounded-full border border-purple-200 dark:border-purple-600 shadow-sm dark:hover:text-white dark:text-gray-300 hover:bg-purple-100 dark:bg-purple-700 dark:hover:bg-purple-600 focus:ring-4 focus:ring-purple-300 focus:outline-none dark:focus:ring-purple-400">
-                    <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-                        <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
-                        <path d="M20 15h-1a2 2 0 0 0 -2 2v2a2 2 0 0 0 2 2h1v-3" />
-                        <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
-                        <path d="M11 21v-6l3 6v-6" />
-                    </svg>
-                </button>
+                <a id="a_png1" href=`/public/media/${i18n.Link_PNG_1}` download={i18n.Link_PNG_1}>
+                    <button id="btn_png" type="button" data-tooltip-target="tooltip-copy" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-600 hover:text-gray-900 bg-purple-300 rounded-full border border-purple-200 dark:border-purple-600 shadow-sm dark:hover:text-white dark:text-gray-300 hover:bg-purple-100 dark:bg-purple-700 dark:hover:bg-purple-600 focus:ring-4 focus:ring-purple-300 focus:outline-none dark:focus:ring-purple-400">
+                        <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                            <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                            <path d="M20 15h-1a2 2 0 0 0 -2 2v2a2 2 0 0 0 2 2h1v-3" />
+                            <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                            <path d="M11 21v-6l3 6v-6" />
+                        </svg>
+                        <a id="a_png2" class="hidden" href=`/public/media/${i18n.Link_PNG_2}` download={i18n.Link_PNG_2}></a>
+                    </button>
+                </a>
             </div>
             <button type="button" id="btn" data-dial-toggle="speed-dial-menu-click" data-dial-trigger="click" aria-controls="speed-dial-menu-click" aria-expanded="false" class="flex items-center justify-center text-white bg-purple-700 rounded-full w-14 h-14 hover:bg-purple-800 dark:bg-purple-600 dark:hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 focus:outline-none dark:focus:ring-purple-800">
                 <svg class="w-5 h-5 transition-transform group-hover:rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
@@ -163,4 +167,20 @@ const i18n = getI18N({ currentLocale })
             }
         }
     });
+
+    btn_back.addEventListener('click', () => {
+        window.location.href = btn_back.value;
+    });
+
+    btn_pdf.addEventListener('click', () => {
+        var pdf = document.getElementById('a_pdf') as HTMLAnchorElement;
+
+        pdf.click();
+    })
+
+    btn_png.addEventListener('click', () => {
+        var png2 = document.getElementById('a_png2') as HTMLAnchorElement;
+        
+        png2.click();
+    })
 </script>
