@@ -66,5 +66,21 @@
     "Contact_Message": "Your Message",
     "Contact_M_PlaceHolder": "Leave your comment...",
     "Contact_Button": "Send",
-    "Link_Resume" : "/en/resume"
+    "Link_Resume" : "/en/resume",
+    "Resume_Description" : "I specialize in front-end development and have an active interest in expanding my skills towards back-end development with the goal of becoming a full-stack developer. My dedication to staying updated with the latest trends and technologies demonstrates my willingness to take on new challenges and contribute to the success of multidisciplinary projects.",
+    "Resume_EX_Header_1" : "UNIVERSITY RESEARCH PROJECT - DEVELOPMENT OF TOOL FOR INDIVIDUALS WITH HEARING IMPAIRMENTS",
+    "Resume_EX_Description_1_1" : "The objective is to provide individuals with hearing impairments the opportunity for inclusive communication.",
+    "Resume_EX_Description_1_2" : "A thorough investigation is being conducted to provide a tool that serves as an interpreter for Mexican Sign Language.",
+    "Resume_EX_Description_1_3" : "The tool implements a neural network that enables the interpretation of signs.",
+    "Resume_EX_Header_2" : "PERSONAL PROJECT - DEVELOPMENT OF MARVELKNIGHT WEBSITE",
+    "Resume_EX_Date_2" : "DECEMBER 2022 - CURRENTLY",
+    "Resume_EX_Description_2_1" : "Autonomously developed project to inform fans about the Marvel Multiverse.",
+    "Resume_EX_Description_2_2" : "The site is currently in its version 2. I am currently working on version 3, where additional features and error resolutions will be implemented.",
+    "Resume_EX_Description_2_3" : "I am currently working with the Astro framework for development, and the site is deployed on Vercel.",
+    "Resume_EX_Header_3" : "DISCLOSURE OF THE PURPOSE OF THE RESEARCH PROJECT",
+    "Resume_EX_Date_3" : "OCTOBER 2023",
+    "Resume_EX_Description_3_1" : "Conference on key points related to the Research Project.",
+    "Resume_EX_Description_3_2" : "The conference addressed the challenges faced by individuals with hearing impairments, emphasized the importance of being well-informed on how to promote better inclusion in society, and outlined the objectives related to the development of the tool.",
+    "Resume_EX_Description_3_3" : "The conference was directed towards students at the Autonomous University of Tamaulipas, specifically those from the Faculty of Reynosa. This presentation was included as part of the academic week for the Computer Systems Engineering program.",
+    "Resume_ED" : "EDUCATION"
 }

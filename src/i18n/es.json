@@ -66,5 +66,21 @@
     "Contact_Message": "Tu Mensaje",
     "Contact_M_PlaceHolder": "Deja tu comentario...",
     "Contact_Button": "Enviar",
-    "Link_Resume" : "/resume"
+    "Link_Resume" : "/resume",
+    "Resume_Description" : "Me especializo en el desarrollo front-end y tengo un interés activo en ampliar mis habilidades hacia el back-end con el objetivo de convertirme en un desarrollador full-stack. Mi dedicación a mantenerme actualizado con las últimas tendencias y tecnologías demuestra mi disposición para asumir nuevos desafíos y contribuir al éxito de proyectos multidisciplinarios.",
+    "Resume_EX_Header_1" : "PROYECTO DE INVESTIGACIÓN UNIVERSITARIO - DESARROLLO DE HERRAMIENTA PARA PERSONAS CON DISCAPACIDAD AUDITIVA",
+    "Resume_EX_Description_1_1" : "El objetivo es brindar a las personas con discapacidad auditiva la oportunidad de brindar una comunicación inclusiva.",
+    "Resume_EX_Description_1_2" : "Se lleva a cabo una investigación profunda para brindar una herramienta que sirva como interprete de la Lengua de Señas Mexicana.",
+    "Resume_EX_Description_1_3" : "La herramienta implementa una red neuronal que permite la interpretación de las señas.",
+    "Resume_EX_Header_2" : "PROYECTO PERSONAL - DESARROLLO DE SITIO WEB MARVELKNIGHT",
+    "Resume_EX_Date_2" : "DICIEMBRE 2022 - ACTUALMENTE",
+    "Resume_EX_Description_2_1" : "Proyecto desarrollado de manera autónoma para informar a los fanáticos sobre el Multiverso de Marvel.",
+    "Resume_EX_Description_2_2" : "El sitio se encuentra en su versión 2. Actualmente trabajo en la versión 3 donde se implementarán más funciones y solución de errores.",
+    "Resume_EX_Description_2_3" : "Actualmente estoy trabajando con el Framework de Astro para el desarrollo, y se encuentra desplegado en Vercel.",
+    "Resume_EX_Header_3" : "DIVULGACIÓN SOBRE EL PROPÓSITO DEL PROYECTO DE INVESTIGACIÓN",
+    "Resume_EX_Date_3" : "OCTUBRE 2023",
+    "Resume_EX_Description_3_1" : "Conferencia sobre los puntos importantes relacionados al Proyecto de Investigación.",
+    "Resume_EX_Description_3_2" : "Se informó sobre como las personas con discapacidad auditiva afrontan dificultades, la importancia de estar bien informados sobre como actuar para que haya una mejor inclusión en la sociedad y sobre los objetivos relacionados con el desarrollo de la herramienta.",
+    "Resume_EX_Description_3_3" : "La conferencia fue dirigida a estudiantes de la Universidad Autónoma de Tamaulipas, de la Facultad de Reynosa. Dicha conferencia fue parte de la semana académica de Ing. en Sistemas Computacionales.",
+    "Resume_ED" : "EDUCACIÓN"
 }

@@ -12,18 +12,18 @@ const i18n = getI18N({ currentLocale })
         <div class="m-3 rounded-md bg-gray-300 col-span-2 row-auto sm:col-span-4 md:col-span-5 lg:col-span-6">
             <span class="w-full h-full">
                 <h1 class="mt-5 text-gray-800 text-5xl font-extrabold text-center">Francisco Javier Castilleja Quintanilla</h1>
-                <h3 class=" text-gray-700 text-lg text-center">Ingeniero en Sistemas Computacionales - Tamaulipas, México</h3>
-                <p class="mt-1 mb-5 text-gray-600 text-pretty text-center">Me especializo en el desarrollo front-end y tengo un interés activo en ampliar mis habilidades hacia el back-end con el objetivo de convertirme en un desarrollador full-stack. Mi dedicación a mantenerme actualizado con las últimas tendencias y tecnologías demuestra mi disposición para asumir nuevos desafíos y contribuir al éxito de proyectos multidisciplinarios.</p>
+                <h3 class=" text-gray-700 text-lg text-center">{i18n.EC_Description} - Tamaulipas, México</h3>
+                <p class="mt-1 mb-5 text-gray-600 text-pretty text-center">{i18n.Resume_Description}</p>
             </span>
         </div>
         <div class="m-3 px-5 text-black rounded-md bg-gray-300 col-span-2 row-auto sm:col-span-4 md:col-span-5 lg:col-span-6">
-            <h2 class="my-3 text-3xl">Experiencia</h2>
+            <h2 class="my-3 text-3xl">{i18n.Menu_OP_2.toUpperCase()}</h2>
             <div class="w-full h-auto">
-                <h5 class="my-2 text-lg font-bold">Proyecto de Investigación Universitario - Desarrollo de herramienta para personas con discapacidad auditiva</h5>
-                <h6 class="my-2 text-base">2023 - Current</h6>
-                <p class="my-1">El objetivo es brindar a las personas con discapacidad auditiva la oportunidad de brindar una comunicación inclusiva.</p>
-                <p class="my-1">Se lleva a cabo una investigación profunda para brindar una herramienta que sirva como interprete de la Lengua de Señas Mexicana.</p>
-                <p class="my-1">La herramienta implementa una red neuronal que permite la interpretación de las señas.</p>
+                <h5 class="my-2 text-lg font-bold">{i18n.Resume_EX_Header_1}</h5>
+                <h6 class="my-2 text-base">2023 - {i18n.Exp_Date_Now.toUpperCase()}</h6>
+                <p class="my-1">{i18n.Resume_EX_Description_1_1}</p>
+                <p class="my-1">{i18n.Resume_EX_Description_1_2}</p>
+                <p class="my-1">{i18n.Resume_EX_Description_1_3}</p>
                 <span class="flex gap-x-3">
                     <p class="my-1 p-1 border border-gray-800 rounded-lg">Python</p>
                     <p class="my-1 p-1 border border-gray-800 rounded-lg">TensorFlow</p>
@@ -32,11 +32,11 @@ const i18n = getI18N({ currentLocale })
                 <hr class="my-2">
             </div>
             <div class="w-full h-auto">
-                <h5 class="my-2 text-lg font-bold">Proyecto Personal - Desarrollo de Sitio Web MarvelKnight </h5>
-                <h6 class="my-2 text-base">Diciembre 2022 - Actualmente</h6>
-                <p class="my-1">Proyecto desarrollado de manera autónoma para informar a los fanáticos sobre el Multiverso de Marvel.</p>
-                <p class="my-1">El sitio se encuentra en su versión 2. Actualmente trabajo en la versión 3 donde se implementarán mas funciones y solución de errores.</p>
-                <p class="my-1">Actualmente estoy trabajando con el Framework de Astro para el desarrollo, y se encuentra desplegado en Vercel.</p>
+                <h5 class="my-2 text-lg font-bold">{i18n.Resume_EX_Header_2}</h5>
+                <h6 class="my-2 text-base">{i18n.Resume_EX_Date_2}</h6>
+                <p class="my-1">{i18n.Resume_EX_Description_2_1}</p>
+                <p class="my-1">{i18n.Resume_EX_Description_2_2}</p>
+                <p class="my-1">{i18n.Resume_EX_Description_2_3}</p>
                 <span class="flex gap-x-3">
                     <p class="my-1 p-1 border border-gray-800 rounded-lg">HTML</p>
                     <p class="my-1 p-1 border border-gray-800 rounded-lg">CSS</p>
@@ -45,17 +45,17 @@ const i18n = getI18N({ currentLocale })
                 <hr class="my-2">
             </div>
             <div class="w-full h-auto">
-                <h5 class="my-2 text-lg font-bold">Divulgación sobre el propósito del Proyecto de Investigación</h5>
-                <h6 class="my-2 text-base">Noviembre - Diciembre 2023</h6>
-                <p class="my-1">Conferencia sobre los puntos importantes relacionados al Proyecto de Investigación.</p>
-                <p class="my-1">Se informó sobre como las personas con discapacidad auditiva afrontan dificultades, la importancia de estar bien informados sobre como actuar para que haya una mejor inclusión en la sociedad y sobre los objetivos relacionados con el desarrollo de la herramienta.</p>
-                <p class="my-1">La conferencia fue dirigida a estudiantes de la Universidad Autónoma de Tamaulipas, de la Facultad de Reynosa. Dicha conferencia fue parte de la semana académica de Ing. en Sistemas Computacionales.</p>
+                <h5 class="my-2 text-lg font-bold">{i18n.Resume_EX_Header_3}</h5>
+                <h6 class="my-2 text-base">{i18n.Resume_EX_Date_3}</h6>
+                <p class="my-1">{i18n.Resume_EX_Description_3_1}</p>
+                <p class="my-1">{i18n.Resume_EX_Description_3_2}</p>
+                <p class="my-1">{i18n.Resume_EX_Description_3_3}</p>
             </div>
         </div>
         <div class="m-3 px-5 text-black rounded-md bg-gray-300 col-span-2 row-auto sm:col-span-4 md:col-span-5 lg:col-span-6">
-            <h2 class="my-3 text-3xl">Educación</h2>
+            <h2 class="my-3 text-3xl">{i18n.Resume_ED}</h2>
             <div class="w-full h-auto">
-                <h5 class="my-2 text-lg font-bold">Universidad Autónoma de Tamaulipas</h5>
+                <h5 class="my-2 text-lg font-bold">UNIVERSIDAD AUTÓNOMA DE TAMAULIPAS</h5>
                 <h6 class="my-2 text-base">Facultad de Medicina e Ingeniería en Sistemas Computacionales de Matamoros</h6>
                 <h6 class="my-2 text-base">Ingeniero en Sistemas Computacionales (Titulo en Proceso)</h6>
                 <h6 class="my-2 text-base">2019 - 2023</h6>
@@ -63,18 +63,18 @@ const i18n = getI18N({ currentLocale })
             </div>
         </div>
         <div class="m-3 px-5 text-black rounded-md bg-gray-300 col-span-2 row-auto sm:col-span-4 md:col-span-5 lg:col-span-6">
-            <h2 class="my-3 text-3xl">Información</h2>
+            <h2 class="my-3 text-3xl">INFORMACIÓN</h2>
             <div class="w-full h-auto">
                 <hr>
-                <p class="my-3 text-lg">Habilidades Blandas</p>
+                <p class="my-3 text-lg">HABILIDADES BLANDAS</p>
                 <span class="grid gap-x-3 grid-cols-2 md:flex">
                     <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">Trabajo en equipo</p>
                     <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">Resolución de problemas</p>
                     <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">Creatividad</p>
-                    <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">Aprendizaje Continuo</p>
+                    <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">Aprendizaje continuo</p>
                 </span>
                 <hr>
-                <p class="my-3 text-lg">Habilidades Duras</p>
+                <p class="my-3 text-lg">HABILIDADES DURAS</p>
                 <span class="grid gap-x-3 grid-cols-2 md:flex">
                     <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">HTML</p>
                     <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">CSS</p>
@@ -88,18 +88,79 @@ const i18n = getI18N({ currentLocale })
                     <p class="grid place-items-center my-1 p-1 text-center border border-gray-800 rounded-lg">Microsoft SQL Server</p>
                 </span>
                 <hr>
-                <p class="my-3 text-lg">Idiomas</p>
+                <p class="my-3 text-lg">IDIOMAS</p>
                 <span class="flex gap-x-3">
                     <p class="my-1 p-1 border border-gray-800 rounded-lg">Español - Nativo</p>
-                    <p class="my-1 p-1 border border-gray-800 rounded-lg">Ingles - Básico</p>
+                    <p class="my-1 p-1 border border-gray-800 rounded-lg">Inglés - Básico</p>
                 </span>
                 <hr class="w-11/12">
-                <p class="my-3 text-lg">Contacto</p>
+                <p class="my-3 text-lg">CONTACTO</p>
                 <p class="my-1">Francisco_Castilleja@outlook.com</p>
                 <p class="my-1">8681581653</p>
                 <p class="my-1">linkedin.com/in/francisco-castilleja</p>
                 <p class="my-1">github.com/FranciscoCastilleja</p>
             </div>
         </div>
+
+        <div data-dial-init class="fixed end-6 bottom-6 group">
+            <div id="speed-dial-menu-click" class="flex-col items-center hidden mb-4 space-y-2">
+                <button id="btn_back" type="button" data-tooltip-target="tooltip-print" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-600 hover:text-gray-900 bg-purple-300 rounded-full border border-purple-200 dark:border-purple-600 shadow-sm dark:hover:text-white dark:text-gray-300 hover:bg-purple-100 dark:bg-purple-700 dark:hover:bg-purple-600 focus:ring-4 focus:ring-purple-300 focus:outline-none dark:focus:ring-purple-400">
+                    <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M15 6l-6 6l6 6" />
+                    </svg>
+                </button>
+                <button id="btn_pdf" type="button" data-tooltip-target="tooltip-download" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-600 hover:text-gray-900 bg-purple-300 rounded-full border border-purple-200 dark:border-purple-600 shadow-sm dark:hover:text-white dark:text-gray-300 hover:bg-purple-100 dark:bg-purple-700 dark:hover:bg-purple-600 focus:ring-4 focus:ring-purple-300 focus:outline-none dark:focus:ring-purple-400">
+                    <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                        <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                        <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                        <path d="M17 18h2" />
+                        <path d="M20 15h-3v6" />
+                        <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
+                    </svg>
+                </button>
+                <button id="btn_png" type="button" data-tooltip-target="tooltip-copy" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-600 hover:text-gray-900 bg-purple-300 rounded-full border border-purple-200 dark:border-purple-600 shadow-sm dark:hover:text-white dark:text-gray-300 hover:bg-purple-100 dark:bg-purple-700 dark:hover:bg-purple-600 focus:ring-4 focus:ring-purple-300 focus:outline-none dark:focus:ring-purple-400">
+                    <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                        <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                        <path d="M20 15h-1a2 2 0 0 0 -2 2v2a2 2 0 0 0 2 2h1v-3" />
+                        <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                        <path d="M11 21v-6l3 6v-6" />
+                    </svg>
+                </button>
+            </div>
+            <button type="button" id="btn" data-dial-toggle="speed-dial-menu-click" data-dial-trigger="click" aria-controls="speed-dial-menu-click" aria-expanded="false" class="flex items-center justify-center text-white bg-purple-700 rounded-full w-14 h-14 hover:bg-purple-800 dark:bg-purple-600 dark:hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 focus:outline-none dark:focus:ring-purple-800">
+                <svg class="w-5 h-5 transition-transform group-hover:rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                </svg>
+            </button>
+        </div>
     </main>
 </Layout>
+
+<script>
+    const btn = document.getElementById('btn') as HTMLButtonElement;
+    const pnl = document.getElementById('speed-dial-menu-click') as HTMLElement;
+    const btn_back = document.getElementById('btn_back') as HTMLButtonElement;
+    const btn_pdf = document.getElementById('btn_pdf') as HTMLButtonElement;
+    const btn_png = document.getElementById('btn_png') as HTMLButtonElement;
+
+    btn.addEventListener('click', () => {
+        if (pnl.classList.contains('hidden')) {
+            pnl.classList.replace('hidden', 'flex');
+        } else {
+            pnl.classList.replace('flex', 'hidden');
+        }
+    });
+    
+    document.addEventListener('click', (event) => {
+        if (!(btn && btn.contains(event.target as Node))) {
+            if (pnl.classList.contains('flex')) {
+                pnl.classList.replace('flex', 'hidden');
+            }
+        }
+    });
+</script>
