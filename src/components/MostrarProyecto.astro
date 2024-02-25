@@ -25,50 +25,21 @@ import MobilIcon from './icons/MobilIcon.astro';
                 <MobilIcon width="25" height="25"/>
             </button>
         </div>
-        <div id="desktop" class="block w-full h-96">
-            <div class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[16px] rounded-t-xl h-[172px] max-w-[301px] lg:max-w-[450px] lg:h-[300px]">
-                <div class="rounded-xl overflow-hidden h-[140px] md:h-[262px]">
-                    <img src="../../public/media/Desktop-Laptop-MisIdeas.webp" class="dark:hidden h-[140px] w-full rounded-xl lg:h-[250px]" alt="">
-                    <img src="../../public/media/Desktop-Laptop-MisIdeas.webp" class="hidden dark:block h-[140px] w-full rounded-xl lg:h-[250px]" alt="">
-                </div>
-            </div>
-            <div class="relative mx-auto bg-gray-900 dark:bg-gray-700 rounded-b-xl h-[24px] max-w-[301px] lg:max-w-[450px]"></div>
-            <div class="relative mx-auto bg-gray-800 rounded-b-xl h-[55px] max-w-[83px] md:w-full"></div>
+        <div id="desktop" class="flex w-full h-96 justify-center">
+            <img id="D-L" class="dark:hidden w-full h-72 sm:h-full lg:w-10/12 zoom" alt="">
+            <img id="D-D" class="hidden dark:block w-full h-72 sm:h-full lg:w-10/12 zoom" alt="">
         </div>
-        <div id="laptop" class="hidden w-full h-96">
-            <div class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[172px] max-w-[301px] lg:max-w-[400px] lg:h-[250px]">
-                <div class="rounded-lg overflow-hidden h-[156px] bg-white dark:bg-gray-800 lg:h-[255px]">
-                    <img src="../../public/media/Desktop-Laptop-MisIdeas.webp" class="dark:hidden h-[156px] w-full rounded-xl lg:h-[225px]" alt="">
-                    <img src="../../public/media/Desktop-Laptop-MisIdeas.webp" class="hidden dark:block h-[156px] w-full rounded-lg lg:h-[225px]" alt="">
-                </div>
-            </div>
-            <div class="relative mx-auto bg-gray-900 dark:bg-gray-700 rounded-b-xl rounded-t-sm h-[17px] max-w-[351px] lg:max-w-[440px]">
-                <div class="absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl w-[56px] h-[5px] md:w-[96px] md:h-[8px] bg-gray-800"></div>
-            </div>
+        <div id="laptop" class="hidden w-full h-96 justify-center">
+            <img id="L-L" class="dark:hidden w-full h-72 sm:h-full zoom" alt="">
+            <img id="L-D" class="hidden dark:block w-full h-72 sm:h-full lg:w-10/12 zoom" alt="">
         </div>
-        <div id="tablet" class="hidden w-full h-96">
-            <div class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[420px] max-w-[300px] md:w-full">
-                <div class="h-[32px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
-                <div class="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
-                <div class="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
-                <div class="h-[64px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
-                <div class="rounded-[2rem] overflow-hidden h-[392px] bg-white dark:bg-gray-800">
-                    <img src="../../public/media/Tablet-MisIdeas.webp" class="dark:hidden h-[392px]" alt="">
-                    <img src="../../public/media/Tablet-MisIdeas.webp" class="hidden dark:block h-[392px]" alt="">
-                </div>
-            </div>
+        <div id="tablet" class="hidden w-full h-96 justify-center">
+            <img id="T-L" class="dark:hidden w-full h-72 sm:h-full lg:w-10/12 zoom" alt="">
+            <img id="T-D" class="hidden dark:block w-full h-72 sm:h-full lg:w-10/12 zoom" alt="">
         </div>
-        <div id="mobil" class="hidden w-full h-96">
-            <div class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[400px] w-[250px]">
-                <div class="h-[32px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
-                <div class="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
-                <div class="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
-                <div class="h-[64px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
-                <div class="rounded-[2rem] overflow-hidden w-[222px] h-[372px] bg-white dark:bg-gray-800">
-                    <img src="../../public/media/Mobil-MisIdeas.webp" class="dark:hidden w-[222px] h-[372px]" alt="">
-                    <img src="../../public/media/Mobil-MisIdeas.webp" class="hidden dark:block w-[222px] h-[372px]" alt="">
-                </div>
-            </div>
+        <div id="mobil" class="hidden w-full h-96 justify-center">
+            <img id="M-L" class="dark:hidden w-full h-72 sm:h-full lg:w-10/12 zoom" alt="">
+            <img id="M-D" class="hidden dark:block w-full h-72 sm:h-full lg:w-10/12 zoom" alt="">
         </div>
     </div>
 </div>
@@ -94,46 +65,46 @@ import MobilIcon from './icons/MobilIcon.astro';
     const Mobil = document.getElementById('mobil') as HTMLElement;
 
     BtnDesktop.addEventListener('click', () => {
-        Desktop.classList.add('block');
+        Desktop.classList.add('flex');
         Desktop.classList.remove('hidden');
-        Laptop.classList.remove('block');
+        Laptop.classList.remove('flex');
         Laptop.classList.add('hidden');
-        Tablet.classList.remove('block');
+        Tablet.classList.remove('flex');
         Tablet.classList.add('hidden');
-        Mobil.classList.remove('block');
+        Mobil.classList.remove('flex');
         Mobil.classList.add('hidden');
     });
 
     BtnLaptop.addEventListener('click', () => {
-        Desktop.classList.remove('block');
+        Desktop.classList.remove('flex');
         Desktop.classList.add('hidden');
-        Laptop.classList.add('block');
+        Laptop.classList.add('flex');
         Laptop.classList.remove('hidden');
-        Tablet.classList.remove('block');
+        Tablet.classList.remove('flex');
         Tablet.classList.add('hidden');
-        Mobil.classList.remove('block');
+        Mobil.classList.remove('flex');
         Mobil.classList.add('hidden');
     });
 
     BtnTablet.addEventListener('click', () => {
-        Desktop.classList.remove('block');
+        Desktop.classList.remove('flex');
         Desktop.classList.add('hidden');
-        Laptop.classList.remove('block');
+        Laptop.classList.remove('flex');
         Laptop.classList.add('hidden');
-        Tablet.classList.add('block');
+        Tablet.classList.add('flex');
         Tablet.classList.remove('hidden');
-        Mobil.classList.remove('block');
+        Mobil.classList.remove('flex');
         Mobil.classList.add('hidden');
     });
 
     BtnMobil.addEventListener('click', () => {
-        Desktop.classList.remove('block');
+        Desktop.classList.remove('flex');
         Desktop.classList.add('hidden');
-        Laptop.classList.remove('block');
+        Laptop.classList.remove('flex');
         Laptop.classList.add('hidden');
-        Tablet.classList.remove('block');
+        Tablet.classList.remove('flex');
         Tablet.classList.add('hidden');
-        Mobil.classList.add('block');
+        Mobil.classList.add('flex');
         Mobil.classList.remove('hidden');
     });
 </script>
