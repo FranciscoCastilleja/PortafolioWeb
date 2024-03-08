@@ -15,6 +15,7 @@ import TailwindCSSIcon from "./icons/TailwindCSSIcon.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
 import MySQLIcon from "./icons/MySQLIcon.astro";
 import MicrosoftSQLServerIcon from "./icons/MicrosoftSQLServerIcon.astro";
+import PHPIcon from "./icons/PHPIcon.astro";
 import SpanIcon from "./SpanIcon.astro";
 import Section from "./Section.astro";
 
@@ -101,7 +102,7 @@ const i18n = getI18N({ currentLocale })
         </div>
         <div class="grid w-full bg-gray-200 rounded-xl col-auto row-auto sm:w-auto sm:px-5 sm:col-span-2 lg:col-span-3 dark:bg-slate-800">
             <h2 class="py-5 text-xl font-bold text-center">{i18n.Skills_Cat_7}</h2>
-            <span class="grid py-5 gap-x-5 grid-cols-2 sm:flex sm:justify-center">
+            <span class="grid py-5 gap-x-5 grid-cols-2 sm:grid-cols-3 md:flex md:justify-center">
                 <SpanIcon>
                     <HTML5Icon width="50" height="50"/>
                     <h3 class="pt-1">HTML5</h3>
@@ -121,6 +122,10 @@ const i18n = getI18N({ currentLocale })
                 <SpanIcon>
                     <AstroIcon class="fill-black dark:fill-white" width="50" height="50"/>
                     <h3 class="pt-1">Astro</h3>
+                </SpanIcon>
+                <SpanIcon>
+                    <PHPIcon class="fill-black dark:fill-white" width="50" height="50"/>
+                    <h3 class="pt-1">PHP</h3>
                 </SpanIcon>
             </span>
         </div>
