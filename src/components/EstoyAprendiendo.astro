@@ -6,6 +6,8 @@ import NetlifyIcon from "./icons/NetlifyIcon.astro";
 import SupabaseIcon from "./icons/SupabaseIcon.astro";
 import TypeScriptIcon from "./icons/TypeScriptIcon.astro";
 import VercelIcon from "./icons/VercelIcon.astro";
+import ReactIcon from "./icons/ReactIcon.astro";
+import NextjsIcon from "./icons/NextjsIcon.astro";
 
 import { getI18N } from '../i18n/';
 const { currentLocale } = Astro;
@@ -17,7 +19,7 @@ const i18n = getI18N({ currentLocale })
         <EstoyAprendiendoIcon class="fill-black dark:fill-white"/>
         {i18n.Menu_OP_6}
     </h2>
-    <div class="grid py-5 w-full h-auto grid-cols-2 gap-3 place-items-center sm:flex sm:justify-center">
+    <div class="grid py-5 w-full h-auto grid-cols-2 gap-3 place-items-center sm:grid-cols-3 md:flex md:justify-center">
         <SpanIcon>
             <VercelIcon class="fill-black dark:fill-white"/>
             <h3 class="pt-1">Vercel</h3>
@@ -33,6 +35,14 @@ const i18n = getI18N({ currentLocale })
         <SpanIcon>
             <TypeScriptIcon/>
             <h3 class="pt-1">TypeScript</h3>
+        </SpanIcon>
+        <SpanIcon>
+            <ReactIcon width="50" height="50"/>
+            <h3 class="pt-1">React</h3>
+        </SpanIcon>
+        <SpanIcon>
+            <NextjsIcon width="50" height="50"/>
+            <h3 class="pt-1">Next.js</h3>
         </SpanIcon>
     </div>
 </Section>
