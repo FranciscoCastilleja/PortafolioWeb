@@ -18,61 +18,57 @@ const i18n = getI18N({ currentLocale })
 ---
 
 <header class="grid fixed mt-2 w-full h-10 place-items-center z-10">
-    <nav id="nav_1" class="hidden py-1 px-2 size-auto text-white bg-slate-800 rounded-lg lg:inline">
-        <a href="#inicio" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_1}</a>
-        <a href="#experiencia" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_2}</a>
-        <a href="#participacioneventos" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_3}</a>
-        <a href="#proyectos" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_4}</a>
-        <a href="#habilidades" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_5}</a>
-        <a href="#estoyaprendiendo" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_6}</a>
-        <a href="#sobremi" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_7}</a>
-        <a href="#estudios" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_8}</a>
-        <a href="#contacto" class="p-1 hover:bg-purple-900 hover:rounded-lg">{i18n.Menu_OP_9}</a>
-        <button class="p-1 hover:bg-purple-900 hover:rounded-lg" onclick="document.getElementById('Lang_Ops').classList.toggle('hidden')">{i18n.Menu_OP_10}</button>
+    <nav id="nav_1" class="hidden py-1 px-2 size-auto text-white bg-gray-200 rounded-lg lg:inline dark:bg-slate-800">
+        <a href="#inicio" class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white">{i18n.Menu_OP_1}</a>
+        <a href="#experiencia" class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white">{i18n.Menu_OP_2}</a>
+        <a href="#participacioneventos" class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white">{i18n.Menu_OP_3}</a>
+        <a href="#proyectos" class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white">{i18n.Menu_OP_4}</a>
+        <a href="#habilidades" class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white">{i18n.Menu_OP_5}</a>
+        <a href="#sobremi" class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white">{i18n.Menu_OP_7}</a>
+        <a href="#estudios" class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white">{i18n.Menu_OP_8}</a>
+        <a href="#contacto" class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white">{i18n.Menu_OP_9}</a>
+        <button class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white" onclick="document.getElementById('Lang_Ops').classList.toggle('hidden')">{i18n.Menu_OP_10}</button>
     </nav>
-    <nav id="nav_2" class="flex py-1 px-2 size-auto bg-slate-800 rounded-lg lg:hidden">
-        <a href="#inicio" class="block p-2 hover:bg-purple-900 hover:rounded-lg">
-            <HomeIcon class="fill-white"/>
+    <nav id="nav_2" class="flex py-1 px-2 size-auto bg-gray-200 rounded-lg lg:hidden dark:bg-slate-800">
+        <a href="#inicio" class="block p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600">
+            <HomeIcon class="fill-black dark:fill-white"/>
         </a>
-        <a href="#experiencia" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <ExperienciaIcon class="fill-white"/>
+        <a href="#experiencia" class="p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600">
+            <ExperienciaIcon class="fill-black dark:fill-white"/>
         </a>
-        <a href="#participacioneventos" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <ParticipacionEventosIcon class="fill-white"/>
+        <a href="#participacioneventos" class="p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600">
+            <ParticipacionEventosIcon class="fill-black dark:fill-white"/>
         </a>
-        <a href="#proyectos" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <ProyectosIcon class="fill-white"/>
+        <a href="#proyectos" class="p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600">
+            <ProyectosIcon class="fill-black dark:fill-white"/>
         </a>
-        <a href="#habilidades" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <HabilidadesIcon class="fill-white"/>
+        <a href="#habilidades" class="p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600">
+            <HabilidadesIcon class="fill-black dark:fill-white"/>
         </a>
-        <a href="#estoyaprendiendo" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <EstoyAprendiendoIcon class="fill-white"/>
+        <a href="#sobremi" class="p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600">
+            <SobreMiIcon class="fill-black dark:fill-white"/>
         </a>
-        <a href="#sobremi" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <SobreMiIcon class="fill-white"/>
+        <a href="#estudios" class="p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600">
+            <EstudiosIcon class="fill-black dark:fill-white"/>
         </a>
-        <a href="#estudios" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <EstudiosIcon class="fill-white"/>
+        <a href="#contacto" class="p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600">
+            <ContactoIcon class="fill-black dark:fill-white"/>
         </a>
-        <a href="#contacto" class="p-2 hover:bg-purple-900 hover:rounded-lg">
-            <ContactoIcon class="fill-white"/>
-        </a>
-        <button class="p-2 hover:bg-purple-900 hover:rounded-lg" onclick="document.getElementById('Lang_Ops').classList.toggle('hidden')">
-            <IdiomaIcon class="fill-white"/>
+        <button class="p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600" onclick="document.getElementById('Lang_Ops').classList.toggle('hidden')">
+            <IdiomaIcon class="fill-black dark:fill-white"/>
         </button>
     </nav>
-    <div id="Lang_Ops" class="hidden absolute p-3 top-12 bg-slate-800 rounded-lg">
-        <a href="/" class="hidden p-1 gap-x-3 rounded-lg lg:flex hover:bg-slate-600">
+    <div id="Lang_Ops" class="hidden absolute p-3 top-12 bg-gray-200 rounded-lg dark:bg-slate-800">
+        <a href="/" class="hidden p-1 text-black gap-x-3 rounded-lg lg:flex hover:bg-gray-300 dark:hover:bg-slate-600 dark:text-white">
             {i18n.Menu_OP_10_es}
         </a>
-        <a href="/en" class="hidden p-1 gap-x-3 rounded-lg lg:flex hover:bg-slate-600">
+        <a href="/en" class="hidden p-1 text-black gap-x-3 rounded-lg lg:flex hover:bg-gray-300 dark:hover:bg-slate-600 dark:text-white">
             {i18n.Menu_OP_10_en}
         </a>
-        <a href="/" class="flex p-1 gap-x-3 rounded-lg lg:hidden hover:bg-slate-600">
+        <a href="/" class="flex p-1 gap-x-3 rounded-lg lg:hidden hover:bg-gray-300 dark:hover:bg-slate-600">
             <EsMxIcon width="25" height="25"/>
         </a>
-        <a href="/en" class="flex p-1 gap-x-3 rounded-lg lg:hidden hover:bg-slate-600">
+        <a href="/en" class="flex p-1 gap-x-3 rounded-lg lg:hidden hover:bg-gray-300 dark:hover:bg-slate-600">
             <EnUsIcon width="25" height="25"/>
         </a>
     </div>
