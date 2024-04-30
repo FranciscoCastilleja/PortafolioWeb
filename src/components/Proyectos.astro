@@ -10,7 +10,11 @@ import ProyectosIcon from "./icons/ProyectosIcon.astro";
 import TailwindCSSIcon from "./icons/TailwindCSSIcon.astro";
 import ExternalLinkIcon from "./icons/ExternalLinkIcon.astro";
 import MostrarProyecto from "./MostrarProyecto.astro";
-
+import NextjsIcon from "./icons/NextjsIcon.astro";
+import ReactIcon from "./icons/ReactIcon.astro";
+import TypeScriptIcon from "./icons/TypeScriptIcon.astro";
+import VercelIcon from "./icons/VercelIcon.astro";
+import SupabaseIcon from "./icons/SupabaseIcon.astro";
 import { getI18N } from '../i18n/';
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale })
@@ -23,6 +27,38 @@ const i18n = getI18N({ currentLocale })
     </h2>
     <div class="py-5 w-full h-auto lg:max-w-2xl"> 
         <div class="grid my-2 p-2 place-items-center gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+            <div class="col-auto row-auto max-w-sm bg-gray-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:max-w-lg">
+                <img class="rounded-t-lg zoom" src="/media/StarWarsChronology.webp" alt="Foto de la página Star Wars Chronology" />
+                <div class="p-5">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Star Wars Chronology</h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{i18n.P_3_Description_1}</p>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{i18n.P_3_Description_2}</p>
+                    <span class="flex mb-3 py-1 gap-x-1">
+                        <NextjsIcon width="25" height="25"/>
+                        <ReactIcon width="25" height="25"/>
+                        <HTML5Icon width="25" height="25"/>
+                        <CSSIcon width="25" height="25"/>
+                        <TailwindCSSIcon width="25" height="25"/>
+                        <TypeScriptIcon width="25" height="25"/>
+                        <VercelIcon class="fill-black dark:fill-white" width="25" height="25"/>
+                        <SupabaseIcon width="25" height="25"/>
+                    </span>
+                    <span class="flex mb-3 py-1 gap-x-1">
+                        <a href="https://starwars-chronology.vercel.app/" target="_blank">
+                            <ExternalLinkIcon width="25" height="25"/>
+                        </a>
+                        <a href="https://github.com/FranciscoCastilleja/StarWarsProject" target="_blank">
+                            <GitHubIcon width="25" height="25"/>
+                        </a>
+                    </span>
+                    <button id="show-3" type="button" class="inline-flex cursor-pointer items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                        {i18n.P_Button}
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
             <div class="col-auto row-auto max-w-sm bg-gray-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:max-w-lg">
                 <img class="rounded-t-lg zoom" src="/media/MisIdeas-IMG-1.webp" alt="Foto de la página Mis Ideas" />
                 <div class="p-5">
@@ -152,6 +188,34 @@ const i18n = getI18N({ currentLocale })
                     }
                     if (img.id == "M-D") {
                         img.src = "/media/Mobile-SpaceX-Clon.webp";
+                    }
+                })
+            } else if (b.id === "show-3") {
+                let imgs = Panel.querySelectorAll('img');
+                imgs.forEach(function (img) {
+                    if (img.id == "D-L") {
+                        img.src = "/media/Desktop-StarWarsChronology.webp";
+                    }
+                    if (img.id == "D-D") {
+                        img.src = "/media/Desktop-StarWarsChronology.webp";
+                    }
+                    if (img.id == "L-L") {
+                        img.src = "/media/Laptop-StarWarsChronology.webp";
+                    }
+                    if (img.id == "L-D") {
+                        img.src = "/media/Laptop-StarWarsChronology.webp";
+                    }
+                    if (img.id == "T-L") {
+                        img.src = "/media/Tablet-StarWarsChronology.webp";
+                    }
+                    if (img.id == "T-D") {
+                        img.src = "/media/Tablet-StarWarsChronology.webp";
+                    }
+                    if (img.id == "M-L") {
+                        img.src = "/media/Mobile-StarWarsChronology.webp";
+                    }
+                    if (img.id == "M-D") {
+                        img.src = "/media/Mobile-StarWarsChronology.webp";
                     }
                 })
             }
