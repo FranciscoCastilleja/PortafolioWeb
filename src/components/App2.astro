@@ -13,37 +13,49 @@ const i18n = getI18N({ currentLocale })
 
 <Layout title={i18n.Title} description={i18n.Description}>
     <main class="w-full h-full bg-white overflow-hidden gap-y-2">
-        <div class="flex m-3 h-full">
-            <span class="flex w-1/5 h-auto justify-center">
-                <img class="size-40 object-cover" src="/media/foto.webp" alt="Foto / Picture">
+        <div class="grid m-3 h-full place-items-center xl:flex">
+            <span class="flex w-full h-auto justify-center xl:w-1/5">
+                <img class="size-40 object-cover rounded-full md:rounded-none" src="/media/foto.webp" alt="Foto / Picture">
             </span>
-            <span class="grid w-4/5 h-auto gap-y-3">
-                <h1 class="text-black text-5xl font-extrabold">Francisco Javier Castilleja Quintanilla</h1>
-                <h3 class=" text-black text-lg">{i18n.EC_Description}</h3>
-                <span class="flex">
-                    <PinIcon class="text-red-600"/>
-                    <p class="text-black text-lg">Tamaulipas, México</p>
-                    <p class="mx-1 text-black text-lg">|</p>
-                    <PhoneIcon class="ml-1 text-red-600"/>
-                    <a class="text-black text-lg" href="tel:+528681581653">(868)-158-1653</a>
-                    <p class="mx-1 text-black text-lg">|</p>
-                    <ArrobaIcon class="ml-1 text-red-600"/>
-                    <a class="text-black text-lg" href="mailto:francisco_castilleja@outlook.com">Francisco_Castilleja@outlook.com</a>
-                    <p class="mx-1 text-black text-lg">|</p>
-                    <LinkIcon class="ml-1 text-red-600"/>
-                    <a class="text-black text-lg" href="https://franciscocastilleja.vercel.app/">{i18n.Resume_Portfolio}</a>
+            <span class="grid w-full h-auto gap-y-3 xl:w-4/5">
+                <h1 class="text-black text-center text-xl font-extrabold md:text-5xl xl:text-left">Francisco Javier Castilleja Quintanilla</h1>
+                <h3 class=" text-black text-center text-lg xl:text-left">{i18n.EC_Description}</h3>
+                <span class="grid place-items-center gap-y-3 md:grid-cols-2 xl:flex">
+                    <span class="flex">
+                        <PinIcon class="text-red-600"/>
+                        <p class="text-black text-lg">Tamaulipas, México</p>
+                    </span>
+                    <p class="hidden mx-1 text-black text-lg xl:block">|</p>
+                    <span class="flex">
+                        <PhoneIcon class="ml-1 text-red-600"/>
+                        <a class="text-black text-lg" href="tel:+528681581653">(868)-158-1653</a>
+                    </span>
+                    <p class="hidden mx-1 text-black text-lg xl:block">|</p>
+                    <span class="flex">
+                        <ArrobaIcon class="ml-1 text-red-600"/>
+                        <a class="text-black text-lg" href="mailto:francisco_castilleja@outlook.com">Francisco_Castilleja@outlook.com</a>
+                    </span>
+                    <p class="hidden mx-1 text-black text-lg xl:block">|</p>
+                    <span class="flex">
+                        <LinkIcon class="ml-1 text-red-600"/>
+                        <a class="text-black text-lg" href="https://franciscocastilleja.vercel.app/">{i18n.Resume_Portfolio}</a>
+                    </span>
                 </span>
             </span>
         </div>
         <div class="my-3 mx-5 w-auto">
             <h2 class="mt-8 text-black text-xl font-bold border-b border-black">{i18n.Resume_Profiles}</h2>
-            <div class="flex mx-5 mt-5">
-                <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256">
-                    <path d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453" fill="#0A66C2"/>
-                </svg>
-                <a class="ml-3 text-black text-lg" href="https://www.linkedin.com/in/francisco-castilleja/">linkedin.com/in/francisco-castilleja/</a>
-                <GitHubIcon class="ml-60" width="25" height="25"/>
-                <a class="ml-3 text-black text-lg" href="https://github.com/FranciscoCastilleja">github.com/FranciscoCastilleja</a>
+            <div class="grid mt-5 gap-y-3 lg:flex lg:mx-5">
+                <span class="flex">
+                    <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256">
+                        <path d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453" fill="#0A66C2"/>
+                    </svg>
+                    <a class="ml-3 text-black text-lg" href="https://www.linkedin.com/in/francisco-castilleja/">linkedin.com/in/francisco-castilleja/</a>
+                </span>
+                <span class="flex">
+                    <GitHubIcon class="lg:ml-60" width="25" height="25"/>
+                    <a class="ml-3 text-black text-lg" href="https://github.com/FranciscoCastilleja">github.com/FranciscoCastilleja</a>
+                </span>
             </div>
         </div>
         <div class="my-3 mx-5 w-auto h-auto">
@@ -80,10 +92,10 @@ const i18n = getI18N({ currentLocale })
         <div class="my-3 mx-5 w-auto h-auto">
             <h2 class="mt-8 text-black text-xl font-bold border-b border-black">{i18n.Resume_ED}</h2>
             <span class="mt-5 w-full h-auto">
-                <p class="text-black font-bold float-left">Universidad Autónoma de Tamaulipas</p>
-                <p class="text-black font-bold float-right">{i18n.Resume_ED_Date}</p>
+                <p class="text-black font-bold sm:float-left">Universidad Autónoma de Tamaulipas</p>
+                <p class="text-black font-bold sm:float-right">{i18n.Resume_ED_Date}</p>
             </span>
-            <p class="inline-flex mt-1"></p>
+            <p class="hidden mt-1 sm:inline-flex"></p>
             <p class="my-1 text-black text-pretty">{i18n.Resume_ED_Carreer}</p>
             <p class="my-1 text-black text-pretty">9.0</p>
             <span class="flex mt-1">
@@ -94,7 +106,7 @@ const i18n = getI18N({ currentLocale })
         </div>
         <div class="my-3 mx-5 w-auto h-auto">
             <h2 class="mt-8 text-black text-xl font-bold border-b border-black">{i18n.Menu_OP_5}</h2>
-            <span class="grid gap-x-3 grid-cols-5">
+            <span class="grid gap-x-3 grid-cols-3 sm:grid-cols-5">
                 <p class="grid place-items-center my-1 p-1 text-black text-center font-bold">HTML</p>
                 <p class="grid place-items-center my-1 p-1 text-black text-center font-bold">CSS</p>
                 <p class="grid place-items-center my-1 p-1 text-black text-center font-bold">Tailwind CSS</p>
@@ -126,7 +138,7 @@ const i18n = getI18N({ currentLocale })
         </div>
         <div class="my-3 mx-5 w-auto h-auto">
             <h2 class="mt-8 text-black text-xl font-bold border-b border-black">{i18n.Menu_OP_9}s</h2>
-            <span class="flex gap-x-80">
+            <span class="flex gap-x-44 sm:gap-x-80">
                 <span>
                     <p class="grid place-items-center mt-1 text-black text-center font-bold">{i18n.Resume_LAN_ES}</p>
                     <p class="grid place-items-center mb-1 text-black text-center">{i18n.Resume_LAN_ES_Level}</p>
