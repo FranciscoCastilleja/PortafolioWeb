@@ -1,14 +1,4 @@
 ---
-import HomeIcon from './icons/HomeIcon.astro'
-import ExperienciaIcon from './icons/ExperienciaIcon.astro'
-import ParticipacionEventosIcon from './icons/ParticipacionEventosIcon.astro'
-import ProyectosIcon from './icons/ProyectosIcon.astro'
-import HabilidadesIcon from './icons/HabilidadesIcon.astro'
-import EstoyAprendiendoIcon from './icons/EstoyAprendiendoIcon.astro'
-import SobreMiIcon from './icons/SobreMiIcon.astro'
-import EstudiosIcon from './icons/EstudiosIcon.astro'
-import ContactoIcon from './icons/ContactoIcon.astro'
-import IdiomaIcon from './icons/IdiomaIcon.astro'
 import EsMxIcon from './icons/EsMxIcon.astro'
 import EnUsIcon from './icons/EnUsIcon.astro'
 
@@ -17,46 +7,13 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale })
 ---
 
-<header class="grid fixed mt-2 w-full h-10 place-items-center z-10">
-    <nav id="nav_1" class="hidden py-1 px-2 size-auto text-white bg-gray-200 rounded-lg lg:inline dark:bg-slate-800">
+<header class="grid fixed mt-6 w-full h-10 place-items-center z-10">
+    <nav id="nav" class="flex py-1 px-3 size-auto text-white bg-gray-200 rounded-lg border border-white/30 gap-x-2 sm:gap-x-5 dark:bg-slate-800">
         <a href="#inicio" class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white">{i18n.Menu_OP_1}</a>
         <a href="#experiencia" class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white">{i18n.Menu_OP_2}</a>
-        <a href="#participacioneventos" class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white">{i18n.Menu_OP_3}</a>
-        <a href="#proyectos" class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white">{i18n.Menu_OP_4}</a>
-        <a href="#habilidades" class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white">{i18n.Menu_OP_5}</a>
         <a href="#sobremi" class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white">{i18n.Menu_OP_6}</a>
-        <a href="#estudios" class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white">{i18n.Menu_OP_7}</a>
         <a href="#contacto" class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white">{i18n.Menu_OP_8}</a>
         <button class="p-1 text-black hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600 dark:text-white" onclick="document.getElementById('Lang_Ops').classList.toggle('hidden')">{i18n.Menu_OP_9}</button>
-    </nav>
-    <nav id="nav_2" class="flex py-1 px-2 size-auto bg-gray-200 rounded-lg lg:hidden dark:bg-slate-800">
-        <a href="#inicio" class="block p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600">
-            <HomeIcon class="fill-black dark:fill-white"/>
-        </a>
-        <a href="#experiencia" class="p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600">
-            <ExperienciaIcon class="fill-black dark:fill-white"/>
-        </a>
-        <a href="#participacioneventos" class="p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600">
-            <ParticipacionEventosIcon class="fill-black dark:fill-white"/>
-        </a>
-        <a href="#proyectos" class="p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600">
-            <ProyectosIcon class="fill-black dark:fill-white"/>
-        </a>
-        <a href="#habilidades" class="p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600">
-            <HabilidadesIcon class="fill-black dark:fill-white"/>
-        </a>
-        <a href="#sobremi" class="p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600">
-            <SobreMiIcon class="fill-black dark:fill-white"/>
-        </a>
-        <a href="#estudios" class="p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600">
-            <EstudiosIcon class="fill-black dark:fill-white"/>
-        </a>
-        <a href="#contacto" class="p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600">
-            <ContactoIcon class="fill-black dark:fill-white"/>
-        </a>
-        <button class="p-2 hover:bg-gray-300 hover:rounded-lg dark:hover:bg-slate-600" onclick="document.getElementById('Lang_Ops').classList.toggle('hidden')">
-            <IdiomaIcon class="fill-black dark:fill-white"/>
-        </button>
     </nav>
     <div id="Lang_Ops" class="hidden absolute p-3 top-12 bg-gray-200 rounded-lg dark:bg-slate-800">
         <a href="/" class="hidden p-1 text-black gap-x-3 rounded-lg lg:flex hover:bg-gray-300 dark:hover:bg-slate-600 dark:text-white">
@@ -100,20 +57,16 @@ const i18n = getI18N({ currentLocale })
 
 <script>
     let LangOps = document.getElementById("Lang_Ops") as HTMLElement;
-    let nav1 = document.getElementById('nav_1') as HTMLElement;
-    let nav2 = document.getElementById('nav_2') as HTMLElement;
-    let btn1 = nav1.querySelector('button') as HTMLButtonElement;
-    let btn2 = nav2.querySelector('button') as HTMLButtonElement;
+    let body = document.querySelector('body') as HTMLElement;
+    let nav = document.getElementById('nav') as HTMLElement;
+    let btn = nav.querySelector('button') as HTMLButtonElement;
 
     function CheckMenu() {
-        let n1 = nav1.getBoundingClientRect().width;
-        let n2 = nav2.getBoundingClientRect().width;
-        if (n1 == 0) { 
-            let l1 = btn2.getBoundingClientRect().left;
-            LangOps.style.left = (l1 - 10).toString() + "px";
-        } else if (n2 == 0) {
-            let l2 = btn1.getBoundingClientRect().left;
-            LangOps.style.left = (l2 - 3).toString() + "px";
+        let l = btn.getBoundingClientRect().left;
+        if (body.clientWidth > 1023) { 
+            LangOps.style.left = (l - 15).toString() + "px";
+        } else {
+            LangOps.style.left = (l).toString() + "px";
         }
     }
 
