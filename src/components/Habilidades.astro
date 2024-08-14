@@ -28,6 +28,7 @@ import NetlifyIcon from "./icons/NetlifyIcon.astro";
 import SupabaseIcon from "./icons/SupabaseIcon.astro";
 import NodejsIcon from "./icons/NodejsIcon.astro";
 import ExpressjsIcon from "./icons/ExpressjsIcon.astro";
+import AngularIcon from "./icons/AngularIcon.astro";
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale })
 ---
@@ -150,6 +151,10 @@ const i18n = getI18N({ currentLocale })
                 <SpanIcon>
                     <ExpressjsIcon width="50" height="50"/>
                     <h3 class="pt-1">Express.js</h3>
+                </SpanIcon>
+                <SpanIcon>
+                    <AngularIcon width="50" height="50"/>
+                    <h3 class="pt-1">Angular</h3>
                 </SpanIcon>
             </span>
         </div>
