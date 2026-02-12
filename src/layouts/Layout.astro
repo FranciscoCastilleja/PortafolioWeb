@@ -4,20 +4,13 @@ import '@fontsource-variable/raleway';
 import { getI18N } from '../i18n/';
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale })
-
-interface Props {
-	title: string;
-	description: string;
-}
-
-const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
+		<meta name="description" content={i18n.Description} />
 		<meta name="viewport" content="width=device-width" />
 		<meta property='og:title' content={i18n.Title} />
 		<meta property='og:image' content='/media/Portafolio.webp' />
@@ -29,55 +22,20 @@ const { title, description } = Astro.props;
 		<link rel="canonical" href="https://franciscocastilleja.vercel.app">
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{i18n.Title}</title>
 	</head>
 	<body>
-		<div id="light" class="absolute top-0 z-[-2] h-screen w-full bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]"></div>
-		<div id="dark_content" class="fixed left-0 top-0 w-full h-full -z-10">
-			<div id="dark" class="relative h-full w-full bg-slate-950">
-				<div class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
-				<div class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
-			</div>
-		</div>
 		<slot />
 		<script src="../../node_modules/medium-zoom/dist/medium-zoom.min.js"></script>
 	</body>
 </html>
 <style is:global>
-	:root {
-		color-scheme: light dark;
-	}
-
 	html {
 		font-family: 'Raleway Variable', sans-serif;
 	}
 
-	@media (prefers-color-scheme: dark){
-		html {
-			color: white;
-		}
-
-		#light {
-			display: none;
-		}
-
-		#dark {
-			display: block;
-		}
-	}
-
-	@media (prefers-color-scheme: light) {
-		html {
-			color: black;
-		}
-
-		#light {
-			display: block;
-		}
-
-		#dark {
-			display: none;
-		}
+	body {
+		background-color: #121212;
 	}
 </style>
 

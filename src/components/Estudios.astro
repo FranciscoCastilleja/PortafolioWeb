@@ -1,6 +1,5 @@
 ---
 import Section from "./Section.astro";
-import EstudiosIcon from "./icons/EstudiosIcon.astro";
 
 import { getI18N } from '../i18n/';
 const { currentLocale } = Astro;
@@ -8,106 +7,124 @@ const i18n = getI18N({ currentLocale })
 ---
 
 <Section id="estudios"> 
-    <h2 class="flex pb-1 text-xl font-bold items-center gap-x-1">
-        <EstudiosIcon class="fill-black dark:fill-white"/>
-        {i18n.Sub_EC}
-    </h2>
-    <div class="grid py-5 grid-cols-1 gap-3 lg:grid-cols-2">
-        <div class="grid w-full p-2 place-items-center bg-gray-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 lg:w-96">
-            <h5 class="my-1 text-xl text-center font-bold tracking-tight text-gray-900 sm:text-2xl dark:text-white">Universidad Autónoma de Tamaulipas</h5>
-            <p class="font-normal text-gray-700 dark:text-gray-400">FMeISCdM</p>
-            <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_Description}</p>
-            <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">2019 - 2023 ({i18n.EC_Title})</p>
+    <h2 class="pb-1 text-center text-5xl uppercase text-white font-black select-none">{i18n.OP_6}</h2>
+    <div class="grid py-5 grid-cols-1 gap-3 lg:grid-cols-3">
+        <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+            <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">Universidad Autónoma de Tamaulipas</h5>
+            <p class="font-normal text-gray-400">FMeISCdM</p>
+            <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_Description}</p>
+            <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">2019 - 2023 ({i18n.EC_Title})</p>
         </div>
-        <a href="https://www.sololearn.com/certificates/CC-EP5NLR8F" target="_blank" rel="noopener noreferrer">
-            <div class="grid w-full p-2 size-full place-items-center bg-gray-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 lg:w-96">
-                <h5 class="my-1 text-xl text-center font-bold tracking-tight text-gray-900 sm:text-2xl dark:text-white">Angular</h5>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_Course} sololearn</p>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_13_Date}</p>
-            </div>
-        </a>
-        <a href="https://capacitateparaelempleo.org/verifica/b196589c-9bad-4bba-9040-81e0683fccfe/c0a8dfe8-c885-4b83-9967-7fdbb25ca2d1" target="_blank" rel="noopener noreferrer">
-            <div class="grid w-full p-2 size-full place-items-center bg-gray-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 lg:w-96">
-                <h5 class="my-1 text-xl text-center font-bold tracking-tight text-gray-900 sm:text-2xl dark:text-white">Desarrollador de JavaScript (Node JS)</h5>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_Course} Fundación Carlos Slim - Capacítate para el Empleo</p>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_12_Date}</p>
-            </div>
-        </a>
-        <a href="https://capacitateparaelempleo.org/verifica/b196589c-9bad-4bba-9040-81e0683fccfe/06e5cc79-bda1-445c-bf3c-0fd8f56c6c27" target="_blank" rel="noopener noreferrer">
-            <div class="grid w-full p-2 size-full place-items-center bg-gray-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 lg:w-96">
-                <h5 class="my-1 text-xl text-center font-bold tracking-tight text-gray-900 sm:text-2xl dark:text-white">Analista de optimización en motores de búsqueda (SEO)</h5>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_Course} Fundación Carlos Slim - Capacítate para el Empleo</p>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_11_Date}</p>
+        <a href="https://certificados.midudev.com/0fb859ad-894a-46b1-b221-9681791e237d.pdf" target="_blank" rel="noopener noreferrer">
+            <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+                <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">Figma para Devs</h5>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_Course} Midudev</p>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_16_Date}</p>
             </div>
         </a>
         <a href="https://cert.efset.org/n7jpJX" target="_blank" rel="noopener noreferrer">
-            <div class="grid w-full p-2 size-full place-items-center bg-gray-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 lg:w-96">
-                <h5 class="my-1 text-xl text-center font-bold tracking-tight text-gray-900 sm:text-2xl dark:text-white">EF SET English Certificate 56/100 (B2 Upper Intermediate)</h5>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">EF Standard English Test (EF SET)</p>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_10_Date}</p>
+            <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+                <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">EF SET English Certificate 49/100 (B1 Intermediate)</h5>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">EF Standard English Test (EF SET)</p>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_15_Date}</p>
+            </div>
+        </a>
+        <a href="https://www.sololearn.com/certificates/CC-EP5NLR8F" target="_blank" rel="noopener noreferrer">
+            <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+                <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">Angular</h5>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_Course} sololearn</p>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_14_Date}</p>
+            </div>
+        </a>
+        <a href="https://capacitateparaelempleo.org/verifica/b196589c-9bad-4bba-9040-81e0683fccfe/c0a8dfe8-c885-4b83-9967-7fdbb25ca2d1" target="_blank" rel="noopener noreferrer">
+            <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+                <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">Desarrollador de JavaScript (Node JS)</h5>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_Course} Fundación Carlos Slim - Capacítate para el Empleo</p>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_13_Date}</p>
+            </div>
+        </a>
+        <a href="https://capacitateparaelempleo.org/verifica/b196589c-9bad-4bba-9040-81e0683fccfe/06e5cc79-bda1-445c-bf3c-0fd8f56c6c27" target="_blank" rel="noopener noreferrer">
+            <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+                <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">Analista de optimización en motores de búsqueda (SEO)</h5>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_Course} Fundación Carlos Slim - Capacítate para el Empleo</p>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_12_Date}</p>
+            </div>
+        </a>
+        <a href="https://capacitateparaelempleo.org/verifica/b196589c-9bad-4bba-9040-81e0683fccfe/7e217533-05d3-4a9b-89b3-e9cfc2428ab6" target="_blank" rel="noopener noreferrer">
+            <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+                <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">Diseñador de experiencia de usuario (UX)</h5>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_Course} Fundación Carlos Slim - Capacítate para el Empleo</p>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_11_Date}</p>
             </div>
         </a>
         <a href="https://capacitateparaelempleo.org/verifica/b196589c-9bad-4bba-9040-81e0683fccfe/ec88cc81-94d2-4be1-94d2-c2a4ed39c331?fbclid=IwAR0tLpoUJ5Af15iwmCqzeCX1EDgXFirc7I-CL2bCgbuUMRHRV56toSXJzss" target="_blank" rel="noopener noreferrer">
-            <div class="grid w-full p-2 size-full place-items-center bg-gray-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 lg:w-96">
-                <h5 class="my-1 text-xl text-center font-bold tracking-tight text-gray-900 sm:text-2xl dark:text-white">Desarrollador Back-end</h5>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_Course} Fundación Carlos Slim - Capacítate para el Empleo</p>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_9_Date}</p>
+            <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+                <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">Desarrollador Back-end</h5>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_Course} Fundación Carlos Slim - Capacítate para el Empleo</p>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_10_Date}</p>
+            </div>
+        </a>
+        <a href="https://capacitateparaelempleo.org/verifica/b196589c-9bad-4bba-9040-81e0683fccfe/81ba7a5b-17f5-470d-a06a-e4c54856b2df" target="_blank" rel="noopener noreferrer">
+            <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+                <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">Desarrollador de sitios web responsivos</h5>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_Course} Fundación Carlos Slim - Capacítate para el Empleo</p>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_9_Date}</p>
             </div>
         </a>
         <a href="https://www.sololearn.com/certificates/CC-EIANC5Y3" target="_blank" rel="noopener noreferrer">
-            <div class="grid w-full p-2 size-full place-items-center bg-gray-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 lg:w-96">
-                <h5 class="my-1 text-xl text-center font-bold tracking-tight text-gray-900 sm:text-2xl dark:text-white">JavaScript Intermediate</h5>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_Course} sololearn</p>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_8_Date}</p>
+            <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+                <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">JavaScript Intermediate</h5>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_Course} sololearn</p>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_8_Date}</p>
             </div>
         </a>
         <a href="https://www.sololearn.com/certificates/CC-YUXHBRI1" target="_blank" rel="noopener noreferrer">
-            <div class="grid w-full p-2 size-full place-items-center bg-gray-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 lg:w-96">
-                <h5 class="my-1 text-xl text-center font-bold tracking-tight text-gray-900 sm:text-2xl dark:text-white">Introduction to JavaScript</h5>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_Course} sololearn</p>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_7_Date}</p>
+            <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+                <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">Introduction to JavaScript</h5>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_Course} sololearn</p>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_7_Date}</p>
             </div>
         </a>
         <a href="https://www.sololearn.com/certificates/CC-P37JAC8X" target="_blank" rel="noopener noreferrer">
-            <div class="grid w-full p-2 size-full place-items-center bg-gray-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 lg:w-96">
-                <h5 class="my-1 text-xl text-center font-bold tracking-tight text-gray-900 sm:text-2xl dark:text-white">Introduction to CSS</h5>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_Course} sololearn</p>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_6_Date}</p>
+            <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+                <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">Introduction to CSS</h5>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_Course} sololearn</p>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_6_Date}</p>
             </div>
         </a>
         <a href="https://www.sololearn.com/certificates/CC-CTPOS2GN" target="_blank" rel="noopener noreferrer">
-            <div class="grid w-full p-2 size-full place-items-center bg-gray-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 lg:w-96">
-                <h5 class="my-1 text-xl text-center font-bold tracking-tight text-gray-900 sm:text-2xl dark:text-white">Introduction to HTML</h5>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_Course} sololearn</p>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_5_Date}</p>
+            <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+                <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">Introduction to HTML</h5>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_Course} sololearn</p>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_5_Date}</p>
             </div>
         </a>
         <a href="https://www.sololearn.com/certificates/CT-FPP62DNQ" target="_blank" rel="noopener noreferrer">
-            <div class="grid w-full p-2 size-full place-items-center bg-gray-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 lg:w-96">
-                <h5 class="my-1 text-xl text-center font-bold tracking-tight text-gray-900 sm:text-2xl dark:text-white">Python Core</h5>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_Course} sololearn</p>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_4_Date}</p>
+            <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+                <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">Python Core</h5>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_Course} sololearn</p>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_4_Date}</p>
             </div>
         </a>
         <a href="https://www.sololearn.com/certificates/CT-JPKLLCTC" target="_blank" rel="noopener noreferrer">
-            <div class="grid w-full p-2 size-full place-items-center bg-gray-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 lg:w-96">
-                <h5 class="my-1 text-xl text-center font-bold tracking-tight text-gray-900 sm:text-2xl dark:text-white">Intermediate Python</h5>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_Course} sololearn</p>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_3_Date}</p>
+            <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+                <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">Intermediate Python</h5>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_Course} sololearn</p>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_3_Date}</p>
             </div>
         </a>
         <a href="https://www.sololearn.com/certificates/CT-HPSQ4TSE" target="_blank" rel="noopener noreferrer">
-            <div class="grid w-full p-2 size-full place-items-center bg-gray-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 lg:w-96">
-                <h5 class="my-1 text-xl text-center font-bold tracking-tight text-gray-900 sm:text-2xl dark:text-white">Python for Beginners</h5>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_Course} sololearn</p>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_2_Date}</p>
+            <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+                <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">Python for Beginners</h5>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_Course} sololearn</p>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_2_Date}</p>
             </div>
         </a>
         <a href="https://www.sololearn.com/certificates/CT-UUP2WDW5" target="_blank" rel="noopener noreferrer">
-            <div class="grid w-full p-2 size-full place-items-center bg-gray-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 lg:w-96">
-                <h5 class="my-1 text-xl text-center font-bold tracking-tight text-gray-900 sm:text-2xl dark:text-white">SQL</h5>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_Course} sololearn</p>
-                <p class="py-1 font-normal text-xs text-center text-gray-700 sm:text-base md:py-0 dark:text-gray-400">{i18n.EC_1_Date}</p>
+            <div class="grid p-2 w-full place-items-center bg-transparent border border-white rounded-lg md:w-80 md:h-52">
+                <h5 class="my-1 text-xl text-center font-black tracking-tight text-white md:text-2xl">SQL</h5>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_Course} sololearn</p>
+                <p class="py-1 font-normal text-xs text-center text-gray-300 md:text-base md:py-0">{i18n.EC_1_Date}</p>
             </div>
         </a>
     </div>

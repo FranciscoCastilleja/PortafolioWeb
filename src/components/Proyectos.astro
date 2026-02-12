@@ -1,124 +1,121 @@
 ---
 import Section from "./Section.astro";
-import AstroIcon from "./icons/AstroIcon.astro";
-import CSSIcon from "./icons/CSSIcon.astro";
-import GitHubIcon from "./icons/GitHubIcon.astro";
-import HTML5Icon from "./icons/HTML5Icon.astro";
-import JavaScriptIcon from "./icons/JavaScriptIcon.astro";
-import NetlifyIcon from "./icons/NetlifyIcon.astro";
-import ProyectosIcon from "./icons/ProyectosIcon.astro";
-import TailwindCSSIcon from "./icons/TailwindCSSIcon.astro";
-import ExternalLinkIcon from "./icons/ExternalLinkIcon.astro";
+
 import NextjsIcon from "./icons/NextjsIcon.astro";
-import ReactIcon from "./icons/ReactIcon.astro";
-import TypeScriptIcon from "./icons/TypeScriptIcon.astro";
+import ReactIcon from './icons/ReactIcon.astro';
+import TailwindCSSIcon from './icons/TailwindCSSIcon.astro';
+import TypeScriptIcon from './icons/TypeScriptIcon.astro';
+import HTML5Icon from './icons/HTML5Icon.astro';
+import CSSIcon from './icons/CSSIcon.astro';
 import VercelIcon from "./icons/VercelIcon.astro";
 import SupabaseIcon from "./icons/SupabaseIcon.astro";
+import GitHubIcon from "./icons/GitHubIcon.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import JavaScriptIcon from "./icons/JavaScriptIcon.astro";
+import NetlifyIcon from "./icons/NetlifyIcon.astro";
+
 import { getI18N } from '../i18n/';
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale })
 ---
 
 <Section id="proyectos">
-    <h2 class="flex pb-1 text-xl font-bold items-center gap-x-1">
-        <ProyectosIcon class="fill-black dark:fill-white"/>
-        {i18n.Menu_OP_4}
-    </h2>
-    <div class="py-5 w-full h-auto lg:max-w-2xl"> 
-        <div class="grid my-2 p-2 place-items-center gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-            <div class="col-auto row-auto max-w-sm bg-gray-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:max-w-lg">
-                <img class="rounded-t-lg zoom" src="/media/MarvelKnight.webp" alt="Foto de la página _MarvelKnight_" />
-                <div class="p-5">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">_MarvelKnight_</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{i18n.P_4_Description_1}</p>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{i18n.P_4_Description_2}</p>
+    <h2 class="pb-1 text-5xl uppercase text-white font-black select-none">{i18n.Menu_OP_3}</h2>
+    <div class="py-5 w-full h-auto"> 
+        <div class="grid my-2 p-2 place-items-center gap-3">
+            <div class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
+                <img class="rounded-lg md:order-2 zoom" src="/media/MarvelKnight.webp" alt="Foto de la página _MarvelKnight_" />
+                <div class="p-5 md:order-1">
+                    <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">_MarvelKnight_</h5>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_1_Description_1}</p>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_1_Description_2}</p>
                     <span class="flex mb-3 py-1 gap-x-1">
                         <NextjsIcon width="25" height="25"/>
-                        <ReactIcon width="25" height="25"/>
-                        <HTML5Icon width="25" height="25"/>
-                        <CSSIcon width="25" height="25"/>
-                        <TailwindCSSIcon width="25" height="25"/>
-                        <TypeScriptIcon width="25" height="25"/>
-                        <VercelIcon class="fill-black dark:fill-white" width="25" height="25"/>
-                        <SupabaseIcon width="25" height="25"/>
+                        <ReactIcon width="25" height="25" class="ml-2"/>
+                        <HTML5Icon width="25" height="25" class="ml-2"/>
+                        <CSSIcon width="25" height="25" class="ml-2"/>
+                        <TailwindCSSIcon width="25" height="25" class="ml-2"/>
+                        <TypeScriptIcon width="25" height="25" class="ml-2"/>
+                        <VercelIcon width="25" height="25" class="ml-2"/>
+                        <SupabaseIcon width="25" height="25" class="ml-2"/>
                     </span>
                     <span class="flex mb-3 py-1 gap-x-1">
-                        <a class="hover:scale-105" href="https://marvelknight.vercel.app/" target="_blank" rel="noopener noreferrer">
-                            <ExternalLinkIcon width="30" height="30"/>
+                        <a class="text-white hover:font-black" href="https://marvelknight.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            {i18n.P_Btn}
                         </a>
                     </span>
                 </div>
             </div>
-            <div class="col-auto row-auto max-w-sm h-full bg-gray-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:max-w-lg">
-                <img class="rounded-t-lg zoom" src="/media/StarWarsChronology.webp" alt="Foto de la página Star Wars Chronology" />
-                <div class="p-5">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Star Wars Chronology</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{i18n.P_3_Description_1}</p>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{i18n.P_3_Description_2}</p>
+            <div class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
+                <img class="rounded-lg md:order-2 zoom" src="/media/StarWarsChronology.webp" alt="Foto de la página Star Wars Chronology" />
+                <div class="p-5 md:order-1">
+                    <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">Star Wars Chronology</h5>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_2_Description_1}</p>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_2_Description_2}</p>
                     <span class="flex mb-3 py-1 gap-x-1">
                         <NextjsIcon width="25" height="25"/>
-                        <ReactIcon width="25" height="25"/>
-                        <HTML5Icon width="25" height="25"/>
-                        <CSSIcon width="25" height="25"/>
-                        <TailwindCSSIcon width="25" height="25"/>
-                        <TypeScriptIcon width="25" height="25"/>
-                        <VercelIcon class="fill-black dark:fill-white" width="25" height="25"/>
-                        <SupabaseIcon width="25" height="25"/>
+                        <ReactIcon width="25" height="25" class="ml-2"/>
+                        <HTML5Icon width="25" height="25" class="ml-2"/>
+                        <CSSIcon width="25" height="25" class="ml-2"/>
+                        <TailwindCSSIcon width="25" height="25" class="ml-2"/>
+                        <TypeScriptIcon width="25" height="25" class="ml-2"/>
+                        <VercelIcon width="25" height="25" class="ml-2"/>
+                        <SupabaseIcon width="25" height="25" class="ml-2"/>
                     </span>
-                    <span class="flex mb-3 py-1 gap-x-1">
-                        <a class="hover:scale-105" href="https://starwars-chronology.vercel.app/" target="_blank" rel="noopener noreferrer">
-                            <ExternalLinkIcon width="30" height="30"/>
+                    <span class="flex mb-3 py-1 gap-x-5">
+                        <a class="text-white hover:font-black" href="https://starwars-chronology.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            {i18n.P_Btn}
                         </a>
                         <a class="hover:scale-105" href="https://github.com/FranciscoCastilleja/StarWarsProject" target="_blank" rel="noopener noreferrer">
-                            <GitHubIcon width="30" height="30"/>
+                            <GitHubIcon width="25" height="25"/>
                         </a>
                     </span>
                 </div>
             </div>
-            <div class="col-auto row-auto max-w-sm h-full bg-gray-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:max-w-lg">
-                <img class="rounded-t-lg zoom" src="/media/MisIdeas-IMG-1.webp" alt="Foto de la página Mis Ideas" />
-                <div class="p-5">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Mis Ideas</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{i18n.P_1_Description_1}</p>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{i18n.P_1_Description_2}</p>
+            <div class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
+                <img class="rounded-lg md:order-2 zoom" src="/media/MisIdeas-IMG-1.webp" alt="Foto de la página Mis Ideas" />
+                <div class="p-5 md:order-1">
+                    <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">Mis Ideas</h5>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_3_Description_1}</p>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_3_Description_2}</p>
                     <span class="flex mb-3 py-1 gap-x-1">
-                        <AstroIcon class="fill-black dark:fill-white" width="25" height="25"/>
-                        <HTML5Icon width="25" height="25"/>
-                        <CSSIcon width="25" height="25"/>
-                        <TailwindCSSIcon width="25" height="25"/>
-                        <JavaScriptIcon width="25" height="25"/>
-                        <NetlifyIcon width="25" height="25"/>
+                        <AstroIcon width="25" height="25"/>
+                        <HTML5Icon width="25" height="25" class="ml-2"/>
+                        <CSSIcon width="25" height="25" class="ml-2"/>
+                        <TailwindCSSIcon width="25" height="25" class="ml-2"/>
+                        <JavaScriptIcon width="25" height="25" class="ml-2"/>
+                        <NetlifyIcon width="25" height="25" class="ml-2"/>
                     </span>
-                    <span class="flex mb-3 py-1 gap-x-1">
-                        <a class="hover:scale-105" href="https://misideas.netlify.app/" target="_blank" rel="noopener noreferrer">
-                            <ExternalLinkIcon width="30" height="30"/>
+                    <span class="flex mb-3 py-1 gap-x-5">
+                        <a class="text-white hover:font-black" href="https://misideas.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            {i18n.P_Btn}
                         </a>
                         <a class="hover:scale-105" href="https://github.com/FranciscoCastilleja/MisIdeas" target="_blank" rel="noopener noreferrer">
-                            <GitHubIcon width="30" height="30"/>
+                            <GitHubIcon width="25" height="25"/>
                         </a>
                     </span>
                 </div>
             </div>
-            <div class="col-auto row-auto max-w-sm h-full bg-gray-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:max-w-lg">
-                <img class="rounded-t-lg zoom" src="/media/SpaceX-Clon-IMG-1.webp" alt="Foto de la página SpaceX - Clon" />
-                <div class="p-5">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">SpaceX - Clon</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{i18n.P_2_Description_1}</p>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{i18n.P_2_Description_2}</p>
+            <div class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
+                <img class="rounded-lg md:order-2 zoom" src="/media/SpaceX-Clon-IMG-1.webp" alt="Foto de la página SpaceX - Clon" />
+                <div class="p-5 md:order-1">
+                    <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">SpaceX - Clon</h5>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_4_Description_1}</p>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_4_Description_2}</p>
                     <span class="flex mb-3 py-1 gap-x-1">
-                        <AstroIcon class="fill-black dark:fill-white" width="25" height="25"/>
-                        <HTML5Icon width="25" height="25"/>
-                        <CSSIcon width="25" height="25"/>
-                        <TailwindCSSIcon width="25" height="25"/>
-                        <JavaScriptIcon width="25" height="25"/>
-                        <NetlifyIcon width="25" height="25"/>
+                        <AstroIcon width="25" height="25"/>
+                        <HTML5Icon width="25" height="25" class="ml-2"/>
+                        <CSSIcon width="25" height="25" class="ml-2"/>
+                        <TailwindCSSIcon width="25" height="25" class="ml-2"/>
+                        <JavaScriptIcon width="25" height="25" class="ml-2"/>
+                        <NetlifyIcon width="25" height="25" class="ml-2"/>
                     </span>
-                    <span class="flex mb-3 py-1 gap-x-1">
-                        <a class="hover:scale-105" href="https://spacexclon.netlify.app/" target="_blank" rel="noopener noreferrer">
-                            <ExternalLinkIcon width="30" height="30"/>
+                    <span class="flex mb-3 py-1 gap-x-5">
+                        <a class="text-white hover:font-black" href="https://spacexclon.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            {i18n.P_Btn}
                         </a>
                         <a class="hover:scale-105" href="https://github.com/FranciscoCastilleja/SpaceXClon" target="_blank" rel="noopener noreferrer">
-                            <GitHubIcon width="30" height="30"/>
+                            <GitHubIcon width="25" height="25"/>
                         </a>
                     </span>
                 </div>

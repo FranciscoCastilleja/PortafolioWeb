@@ -1,5 +1,4 @@
 ---
-import HabilidadesIcon from "./icons/HabilidadesIcon.astro";
 import GitHubIcon from "./icons/GitHubIcon.astro";
 import GitIcon from "./icons/GitIcon.astro";
 import PythonIcon from "./icons/PythonIcon.astro";
@@ -12,7 +11,10 @@ import AstroIcon from "./icons/AstroIcon.astro";
 import MySQLIcon from "./icons/MySQLIcon.astro";
 import MicrosoftSQLServerIcon from "./icons/MicrosoftSQLServerIcon.astro";
 import PHPIcon from "./icons/PHPIcon.astro";
-import SpanIcon from "./SpanIcon.astro";
+import StripeIcon from "./icons/StripeIcon.astro";
+import NuxtIcon from "./icons/NuxtIcon.astro";
+import FigmaIcon from "./icons/FigmaIcon.astro";
+
 import Section from "./Section.astro";
 
 import { getI18N } from '../i18n/';
@@ -25,22 +27,15 @@ import SupabaseIcon from "./icons/SupabaseIcon.astro";
 import NodejsIcon from "./icons/NodejsIcon.astro";
 import ExpressjsIcon from "./icons/ExpressjsIcon.astro";
 import AngularIcon from "./icons/AngularIcon.astro";
+import PostgreSQLIcon from "./icons/PostgreSQLIcon.astro";
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale })
 ---
 
 <Section id="habilidades">
-    <h2 class="flex pb-1 text-xl font-bold items-center gap-x-1">
-        <HabilidadesIcon class="fill-black dark:fill-white"/>
-        {i18n.Menu_OP_5}
-    </h2>
-    <div class="flex py-5 w-full h-auto gap-x-5 overflow-hidden whitespace-nowrap group lg:max-w-2xl">
+    <h2 class="pb-1 text-5xl uppercase text-white font-black select-none">{i18n.OP_5}</h2>
+    <div class="flex py-5 w-full h-auto gap-x-5 overflow-hidden whitespace-nowrap group">
         <div class="flex py-2 gap-x-5 animate-[slider_15s_linear_infinite] group-hover:[animation-play-state:paused]">
-            <GitIcon/>
-            <GitHubIcon width="50" height="50"/>
-            <MySQLIcon/>
-            <MicrosoftSQLServerIcon/>
-            <MarkdownIcon class="fill-black stroke-black dark:fill-white dark:stroke-white"/>
             <HTML5Icon width="50" height="50"/>
             <CSSIcon width="50" height="50"/>
             <TailwindCSSIcon width="50" height="50"/>
@@ -49,22 +44,25 @@ const i18n = getI18N({ currentLocale })
             <AstroIcon class="fill-black dark:fill-white" width="50" height="50"/>
             <NextjsIcon width="50" height="50"/>
             <ReactIcon width="50" height="50"/>
-            <PHPIcon class="fill-black dark:fill-white" width="50" height="50"/>
-            <NodejsIcon width="50" height="50"/>
-            <ExpressjsIcon width="50" height="50"/>
-            <AngularIcon width="50" height="50"/>
+            <GitIcon/>
+            <GitHubIcon width="50" height="50"/>
             <VercelIcon class="fill-black dark:fill-white"/>
             <NetlifyIcon width="50" height="50"/>
             <SupabaseIcon width="50" height="50"/>
+            <NodejsIcon width="50" height="50"/>
+            <ExpressjsIcon width="50" height="50"/>
+            <PostgreSQLIcon width="50" height="50"/>
+            <MySQLIcon/>
+            <MicrosoftSQLServerIcon/>
+            <AngularIcon width="50" height="50"/>
+            <StripeIcon width="50" height="50"/>
+            <NuxtIcon width="50" height="50"/>
+            <FigmaIcon width="50" height="50"/>
+            <PHPIcon class="fill-black dark:fill-white" width="50" height="50"/>
+            <MarkdownIcon class="fill-black stroke-black dark:fill-white dark:stroke-white"/>
             <PythonIcon/>
         </div>
         <div class="flex py-2 gap-x-5 animate-[slider_15s_linear_infinite] group-hover:[animation-play-state:paused]">
-            <GitIcon/>
-            <GitHubIcon width="50" height="50"/>
-            <PythonIcon/>
-            <MySQLIcon/>
-            <MicrosoftSQLServerIcon/>
-            <MarkdownIcon class="fill-black stroke-black dark:fill-white dark:stroke-white"/>
             <HTML5Icon width="50" height="50"/>
             <CSSIcon width="50" height="50"/>
             <TailwindCSSIcon width="50" height="50"/>
@@ -73,13 +71,23 @@ const i18n = getI18N({ currentLocale })
             <AstroIcon class="fill-black dark:fill-white" width="50" height="50"/>
             <NextjsIcon width="50" height="50"/>
             <ReactIcon width="50" height="50"/>
-            <PHPIcon class="fill-black dark:fill-white" width="50" height="50"/>
-            <NodejsIcon width="50" height="50"/>
-            <ExpressjsIcon width="50" height="50"/>
-            <AngularIcon width="50" height="50"/>
+            <GitIcon/>
+            <GitHubIcon width="50" height="50"/>
             <VercelIcon class="fill-black dark:fill-white"/>
             <NetlifyIcon width="50" height="50"/>
             <SupabaseIcon width="50" height="50"/>
+            <NodejsIcon width="50" height="50"/>
+            <ExpressjsIcon width="50" height="50"/>
+            <PostgreSQLIcon width="50" height="50"/>
+            <MySQLIcon/>
+            <MicrosoftSQLServerIcon/>
+            <AngularIcon width="50" height="50"/>
+            <StripeIcon width="50" height="50"/>
+            <NuxtIcon width="50" height="50"/>
+            <FigmaIcon width="50" height="50"/>
+            <PHPIcon class="fill-black dark:fill-white" width="50" height="50"/>
+            <MarkdownIcon class="fill-black stroke-black dark:fill-white dark:stroke-white"/>
+            <PythonIcon/>
         </div>
     </div>
 </Section>
