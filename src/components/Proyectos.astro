@@ -13,6 +13,10 @@ import GitHubIcon from "./icons/GitHubIcon.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
 import JavaScriptIcon from "./icons/JavaScriptIcon.astro";
 import NetlifyIcon from "./icons/NetlifyIcon.astro";
+import NeonIcon from "./icons/NeonIcon.astro";
+import StripeIcon from "./icons/StripeIcon.astro";
+import CloudflareIcon from "./icons/CloudflareIcon.astro";
+import NuxtIcon from "./icons/NuxtIcon.astro";
 
 import { getI18N } from '../i18n/';
 const { currentLocale } = Astro;
@@ -24,11 +28,58 @@ const i18n = getI18N({ currentLocale })
     <div class="py-5 w-full h-auto"> 
         <div class="grid my-2 p-2 place-items-center gap-3">
             <div class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
+                <img class="rounded-lg md:order-2 zoom" src="/media/Planify.webp" alt="Foto de la página Planify" />
+                <div class="p-5 md:order-1">
+                    <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">Planify</h5>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_1_Description_1}</p>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_1_Description_2}</p>
+                    <span class="flex mb-3 py-1 gap-x-1">
+                        <AstroIcon width="25" height="25"/>
+                        <NeonIcon width="25" height="25" class="ml-2"/>
+                        <TypeScriptIcon width="25" height="25" class="ml-2"/>
+                        <JavaScriptIcon width="25" height="25" class="ml-2"/>
+                        <HTML5Icon width="25" height="25" class="ml-2"/>
+                        <CSSIcon width="25" height="25" class="ml-2"/>
+                        <StripeIcon width="25" height="25" class="ml-2"/>
+                        <CloudflareIcon width="25" height="25" class="ml-2"/>
+                    </span>
+                    <span class="flex mb-3 py-1 gap-x-1">
+                        <a class="text-white hover:font-black" href="https://theplanify.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            {i18n.P_Btn}
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <div class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
+                <img class="rounded-lg md:order-2 zoom" src="/media/ECommerceApp.webp" alt="Foto de la página E-Commerce App" />
+                <div class="p-5 md:order-1">
+                    <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">E-Commerce App</h5>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_2_Description_1}</p>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_2_Description_2}</p>
+                    <span class="flex mb-3 py-1 gap-x-1">
+                        <NuxtIcon width="25" height="25"/>
+                        <HTML5Icon width="25" height="25" class="ml-2"/>
+                        <CSSIcon width="25" height="25" class="ml-2"/>
+                        <TailwindCSSIcon width="25" height="25" class="ml-2"/>
+                        <TypeScriptIcon width="25" height="25" class="ml-2"/>
+                        <VercelIcon width="25" height="25" class="ml-2"/>
+                    </span>
+                    <span class="flex mb-3 py-1 gap-x-5">
+                        <a class="text-white hover:font-black" href="https://ecommerce-app-nuxt.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            {i18n.P_Btn}
+                        </a>
+                        <a class="hover:scale-105" href="https://github.com/FranciscoCastilleja/ecommerce-app" target="_blank" rel="noopener noreferrer">
+                            <GitHubIcon width="25" height="25"/>
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <div class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
                 <img class="rounded-lg md:order-2 zoom" src="/media/MarvelKnight.webp" alt="Foto de la página _MarvelKnight_" />
                 <div class="p-5 md:order-1">
                     <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">_MarvelKnight_</h5>
-                    <p class="mb-3 font-normal text-gray-400">{i18n.P_1_Description_1}</p>
-                    <p class="mb-3 font-normal text-gray-400">{i18n.P_1_Description_2}</p>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_3_Description_1}</p>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_3_Description_2}</p>
                     <span class="flex mb-3 py-1 gap-x-1">
                         <NextjsIcon width="25" height="25"/>
                         <ReactIcon width="25" height="25" class="ml-2"/>
@@ -50,8 +101,8 @@ const i18n = getI18N({ currentLocale })
                 <img class="rounded-lg md:order-2 zoom" src="/media/StarWarsChronology.webp" alt="Foto de la página Star Wars Chronology" />
                 <div class="p-5 md:order-1">
                     <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">Star Wars Chronology</h5>
-                    <p class="mb-3 font-normal text-gray-400">{i18n.P_2_Description_1}</p>
-                    <p class="mb-3 font-normal text-gray-400">{i18n.P_2_Description_2}</p>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_4_Description_1}</p>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_4_Description_2}</p>
                     <span class="flex mb-3 py-1 gap-x-1">
                         <NextjsIcon width="25" height="25"/>
                         <ReactIcon width="25" height="25" class="ml-2"/>
@@ -73,35 +124,11 @@ const i18n = getI18N({ currentLocale })
                 </div>
             </div>
             <div class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
-                <img class="rounded-lg md:order-2 zoom" src="/media/MisIdeas-IMG-1.webp" alt="Foto de la página Mis Ideas" />
-                <div class="p-5 md:order-1">
-                    <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">Mis Ideas</h5>
-                    <p class="mb-3 font-normal text-gray-400">{i18n.P_3_Description_1}</p>
-                    <p class="mb-3 font-normal text-gray-400">{i18n.P_3_Description_2}</p>
-                    <span class="flex mb-3 py-1 gap-x-1">
-                        <AstroIcon width="25" height="25"/>
-                        <HTML5Icon width="25" height="25" class="ml-2"/>
-                        <CSSIcon width="25" height="25" class="ml-2"/>
-                        <TailwindCSSIcon width="25" height="25" class="ml-2"/>
-                        <JavaScriptIcon width="25" height="25" class="ml-2"/>
-                        <NetlifyIcon width="25" height="25" class="ml-2"/>
-                    </span>
-                    <span class="flex mb-3 py-1 gap-x-5">
-                        <a class="text-white hover:font-black" href="https://misideas.netlify.app/" target="_blank" rel="noopener noreferrer">
-                            {i18n.P_Btn}
-                        </a>
-                        <a class="hover:scale-105" href="https://github.com/FranciscoCastilleja/MisIdeas" target="_blank" rel="noopener noreferrer">
-                            <GitHubIcon width="25" height="25"/>
-                        </a>
-                    </span>
-                </div>
-            </div>
-            <div class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
                 <img class="rounded-lg md:order-2 zoom" src="/media/SpaceX-Clon-IMG-1.webp" alt="Foto de la página SpaceX - Clon" />
                 <div class="p-5 md:order-1">
                     <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">SpaceX - Clon</h5>
-                    <p class="mb-3 font-normal text-gray-400">{i18n.P_4_Description_1}</p>
-                    <p class="mb-3 font-normal text-gray-400">{i18n.P_4_Description_2}</p>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_5_Description_1}</p>
+                    <p class="mb-3 font-normal text-gray-400">{i18n.P_5_Description_2}</p>
                     <span class="flex mb-3 py-1 gap-x-1">
                         <AstroIcon width="25" height="25"/>
                         <HTML5Icon width="25" height="25" class="ml-2"/>
