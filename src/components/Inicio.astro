@@ -7,23 +7,25 @@ import EmailIcon from './icons/EmailIcon.astro';
 import { getI18N } from '../i18n/';
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale })
+
+const isEn = Astro.url.pathname.startsWith("/en");
 ---
 
-<section class="mt-20 py-20 w-full h-[40rem]">
+<section class={`mt-20 py-20 w-full h-[40rem] ${isEn ? "lang-en" : ""}`}>
     <span class="inline-flex items-center justify-center absolute w-60 h-10 bg-transparent text-green-500 text-lg font-medium border border-green-500 left-1/2 transform -translate-x-1/2 rounded-full select-none">{i18n.Span_Header}</span>
     <p class="mt-16 w-full text-center uppercase text-5xl font-black text-white leading-none tracking-tighter select-none md:text-[10rem]">{i18n.Header_1}</p>
     <p class="w-full text-center uppercase text-5xl font-black text-transparent [-webkit-text-stroke:2px_white] leading-none tracking-tighter select-none md:text-[10rem]">{i18n.Header_2}</p>
     <p class="absolute w-full text-center uppercase text-lg font-black text-transparent [-webkit-text-stroke:1px_white] leading-none tracking-widest select-none md:text-5xl">Francisco Javier Castilleja Quintanilla</p>
-    <a class="absolute size-8 top-[280px] left-[15%] transform -translate-x-[85%] cursor-pointer hover:scale-110 md:size-24 md:top-[430px]" href="https://linkedin.com/in/francisco-castilleja" target="_blank" rel="noopener noreferrer">
+    <a class={`absolute size-8 ${ isEn ? "top-[230px] md:top-[250px]" : "top-[280px] md:top-[430px]"} left-[15%] transform -translate-x-[85%] cursor-pointer hover:scale-110 md:size-24`} href="https://linkedin.com/in/francisco-castilleja" target="_blank" rel="noopener noreferrer">
         <LinkedInIcon/>
     </a>
-    <a class="absolute size-8 top-[280px] left-[30%] transform -translate-x-[70%] cursor-pointer hover:scale-110 md:size-24 md:top-[430px]" href="https://github.com/FranciscoCastilleja" target="_blank" rel="noopener noreferrer">
+    <a class={`absolute size-8 ${ isEn ? "top-[230px] md:top-[250px]" : "top-[280px] md:top-[430px]"} left-[30%] transform -translate-x-[70%] cursor-pointer hover:scale-110 md:size-24`} href="https://github.com/FranciscoCastilleja" target="_blank" rel="noopener noreferrer">
         <GitHubIcon/>
     </a>
-    <button id="openResume" class="absolute size-8 top-[280px] left-[70%] transform -translate-x-[30%] cursor-pointer hover:scale-110 md:size-24 md:top-[430px]">
+    <button id="openResume" class={`absolute size-8 ${ isEn ? "top-[230px] left-[70%] transform -translate-x-[30%] md:top-[250px]" : "top-[280px] left-[80%] transform -translate-x-[20%] md:top-[430px]"} cursor-pointer hover:scale-110 md:size-24 md:left-[70%] md:-transform-x-[30%]`}>
         <ResumeIcon class="text-white"/>
     </button>
-    <button class="absolute size-8 top-[280px] left-[85%] transform -translate-x-[15%] cursor-pointer hover:scale-110 md:size-24 md:top-[430px]" onclick="navigator.clipboard.writeText('Francisco_Castilleja@outlook.com')">
+    <button class={`absolute size-8 ${ isEn ? "top-[230px] left-[85%] transform -translate-x-[15%] md:top-[250px]" : "top-[280px] left-[95%] transform -translate-x-[5%] md:top-[430px]"} cursor-pointer hover:scale-110 md:size-24 md:left-[85%] md:-translate-x-[15%]`} onclick="navigator.clipboard.writeText('Francisco_Castilleja@outlook.com')">
         <EmailIcon class="text-white"/>
     </button>
     <div id="resumeContainer" class="absolute hidden top-[100px] left-1/2 -translate-x-1/2 z-50">
