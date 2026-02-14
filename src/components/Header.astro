@@ -9,10 +9,11 @@ const i18n = getI18N({ currentLocale })
 
 <header class="grid fixed mt-6 w-full h-10 place-items-center z-10">
     <nav id="nav" class="flex py-1 px-3 size-auto text-white bg-[#121212] rounded-3xl border border-white/30 gap-x-2 sm:gap-x-5">
-        <a href="#inicio" class="p-1 text-white hover:font-black">{i18n.Menu_OP_1}</a>
-        <a href="#experiencia" class="p-1 text-white hover:font-black">{i18n.Menu_OP_2}</a>
-        <a href="#proyectos" class="p-1 text-white hover:font-black">{i18n.Menu_OP_3}</a>
-        <button class="p-1 text-white hover:font-black" onclick="document.getElementById('Lang_Ops').classList.toggle('hidden')">{i18n.Menu_OP_4}</button>
+        <a href="#inicio" class="p-1 text-white z-30">{i18n.Menu_OP_1}</a>
+        <a href="#experiencia" class="p-1 text-white z-30">{i18n.Menu_OP_2}</a>
+        <a href="#proyectos" class="p-1 text-white z-30">{i18n.Menu_OP_3}</a>
+        <button class="p-1 text-white z-30" onclick="document.getElementById('Lang_Ops').classList.toggle('hidden')">{i18n.Menu_OP_4}</button>
+        <div id="menuBackdrop" class="absolute bg-gray-800 rounded left-[var(--left)] top-[var(--top)] w-[var(--width)] h-[var(--height)] transition-all duration-300 ease-in-out opacity-0 z-20"></div>
     </nav>
     <div id="Lang_Ops" class="hidden absolute p-3 top-12 bg-transparent rounded-lg border border-white/30">
         <a href="/" class="hidden p-1 text-white gap-x-3 rounded-lg lg:flex hover:font-black">
@@ -70,4 +71,26 @@ const i18n = getI18N({ currentLocale })
     }
 
     setInterval(CheckMenu, 1)
+
+    const menuBackdrop = document.getElementById('menuBackdrop') as HTMLElement;
+    const navLinks = nav.querySelectorAll('a, button');
+
+    navLinks.forEach(link => {
+        link.addEventListener('mouseenter', (e) => {
+            const target = e.target as HTMLElement;
+            const rect = target.getBoundingClientRect();
+            menuBackdrop.style.setProperty('--left', `${rect.left}px`);
+            menuBackdrop.style.setProperty('--top', `${rect.top-24}px`);
+            menuBackdrop.style.setProperty('--width', `${rect.width}px`);
+            menuBackdrop.style.setProperty('--height', `${rect.height}px`);
+
+            menuBackdrop.style.opacity = '1';
+            menuBackdrop.style.visibility = 'visible';
+        });
+
+        link.addEventListener('mouseleave', () => {
+            menuBackdrop.style.opacity = '0';
+            menuBackdrop.style.visibility = 'hidden';
+        });
+    });
 </script>
