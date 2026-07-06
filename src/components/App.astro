@@ -22,3 +22,62 @@ const i18n = getI18N({ currentLocale })
 		<Estudios/>
 	</main>
 </Layout>
+
+<script>
+	import { gsap } from "gsap";
+
+	document.addEventListener("DOMContentLoaded", function() {
+		const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+		tl.from("#nav",
+			{
+				autoAlpha: 0,
+				y: -50,
+				scale: 0.5,
+				duration: 0.8,
+			}
+		)
+		.from("#text1",
+			{
+				autoAlpha: 0,
+				y: -50,
+				scale: 0.5,
+				duration: 0.8,
+			}
+		)
+		.from("#text2",
+			{
+				autoAlpha: 0,
+				y: -50,
+				scale: 0.5,
+				duration: 0.8,
+			}
+		)
+		.from(".iconInicio",
+			{
+				autoAlpha: 0,
+				y: -50,
+				scale: 0.5,
+				stagger: {
+					each: 0.1,
+					grid: "auto",
+					from: "center",
+				}
+			}
+		)
+		.from("#text3",
+			{
+				autoAlpha: 0,
+				y: -50,
+				scale: 0.5,
+				duration: 0.8,
+			}
+		)
+		.from("#spanHeader", {
+			autoAlpha: 0,
+			y: -50,
+			scale: 0.5,
+			duration: 0.8,
+		});
+	});
+</script>

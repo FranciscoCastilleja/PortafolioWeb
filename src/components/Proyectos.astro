@@ -24,10 +24,10 @@ const i18n = getI18N({ currentLocale })
 ---
 
 <Section id="proyectos">
-    <h2 class="pb-1 text-5xl uppercase text-white font-black select-none">{i18n.Menu_OP_3}</h2>
-    <div class="py-5 w-full h-auto"> 
+    <h2 id="proyectos-header" class="pb-1 text-5xl uppercase text-white font-black select-none">{i18n.Menu_OP_3}</h2>
+    <div id="proyectos-content" class="py-5 w-full h-auto"> 
         <div class="grid my-2 p-2 place-items-center gap-3">
-            <div class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
+            <div id="proyecto-1" class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
                 <img class="rounded-lg md:order-2 zoom" src="/media/Planify.webp" alt="Foto de la página Planify" />
                 <div class="p-5 md:order-1">
                     <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">Planify</h5>
@@ -50,7 +50,7 @@ const i18n = getI18N({ currentLocale })
                     </span>
                 </div>
             </div>
-            <div class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
+            <div id="proyecto-2" class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
                 <img class="rounded-lg md:order-2 zoom" src="/media/ECommerceApp.webp" alt="Foto de la página E-Commerce App" />
                 <div class="p-5 md:order-1">
                     <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">E-Commerce App</h5>
@@ -74,7 +74,7 @@ const i18n = getI18N({ currentLocale })
                     </span>
                 </div>
             </div>
-            <div class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
+            <div id="proyecto-3" class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
                 <img class="rounded-lg md:order-2 zoom" src="/media/MarvelKnight.webp" alt="Foto de la página _MarvelKnight_" />
                 <div class="p-5 md:order-1">
                     <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">_MarvelKnight_</h5>
@@ -97,7 +97,7 @@ const i18n = getI18N({ currentLocale })
                     </span>
                 </div>
             </div>
-            <div class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
+            <div id="proyecto-4" class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
                 <img class="rounded-lg md:order-2 zoom" src="/media/StarWarsChronology.webp" alt="Foto de la página Star Wars Chronology" />
                 <div class="p-5 md:order-1">
                     <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">Star Wars Chronology</h5>
@@ -123,7 +123,7 @@ const i18n = getI18N({ currentLocale })
                     </span>
                 </div>
             </div>
-            <div class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
+            <div id="proyecto-5" class="flex flex-col py-3 w-4/5 h-[600px] md:h-[300px] border-t border-gray-200 md:flex-row md:justify-between">
                 <img class="rounded-lg md:order-2 zoom" src="/media/SpaceX-Clon-IMG-1.webp" alt="Foto de la página SpaceX - Clon" />
                 <div class="p-5 md:order-1">
                     <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">SpaceX - Clon</h5>
@@ -150,3 +150,71 @@ const i18n = getI18N({ currentLocale })
         </div>
     </div>
 </Section>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from("#proyectos-header", {
+        scrollTrigger: {
+            trigger: "#proyectos-header",
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+        },
+        autoAlpha: 0,
+        y: 50
+    });
+    gsap.from("#proyecto-1", {
+        scrollTrigger: {
+            trigger: "#proyecto-1",
+            start: "top 60%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+        },
+        autoAlpha: 0,
+        x: -50
+    });
+    gsap.from("#proyecto-2", {
+        scrollTrigger: {
+            trigger: "#proyecto-2",
+            start: "top 60%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse"
+        },
+        autoAlpha: 0,
+        x: 50
+    });
+    gsap.from("#proyecto-3", {
+        scrollTrigger: {
+            trigger: "#proyecto-3",
+            start: "top 60%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+        },
+        autoAlpha: 0,
+        x: -50
+    });
+    gsap.from("#proyecto-4", {
+        scrollTrigger: {
+            trigger: "#proyecto-4",
+            start: "top 60%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse"
+        },
+        autoAlpha: 0,
+        x: 50
+    });
+    gsap.from("#proyecto-5", {
+        scrollTrigger: {
+            trigger: "#proyecto-5",
+            start: "top 60%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse"
+        },
+        autoAlpha: 0,
+        x: -50
+    });
+</script>
