@@ -29,20 +29,18 @@ const i18n = getI18N({ currentLocale })
 	document.addEventListener("DOMContentLoaded", function() {
 		const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
-		tl.from("#nav",
-			{
-				autoAlpha: 0,
-				y: -50,
-				scale: 0.5,
-				duration: 0.8,
-			}
-		)
+		tl.from("#spanHeader", {
+			autoAlpha: 0,
+			y: -50,
+			scale: 0.5,
+			duration: 0.5,
+		})
 		.from("#text1",
 			{
 				autoAlpha: 0,
 				y: -50,
 				scale: 0.5,
-				duration: 0.8,
+				duration: 0.5,
 			}
 		)
 		.from("#text2",
@@ -50,7 +48,23 @@ const i18n = getI18N({ currentLocale })
 				autoAlpha: 0,
 				y: -50,
 				scale: 0.5,
-				duration: 0.8,
+				duration: 0.5,
+			}
+		)
+		.from("#text3",
+			{
+				autoAlpha: 0,
+				y: -50,
+				scale: 0.5,
+				duration: 0.5,
+			}
+		)
+		.from("#openResume",
+			{
+				autoAlpha: 0,
+				y: -50,
+				scale: 0.5,
+				duration: 0.5,
 			}
 		)
 		.from(".iconInicio",
@@ -61,23 +75,17 @@ const i18n = getI18N({ currentLocale })
 				stagger: {
 					each: 0.1,
 					grid: "auto",
-					from: "center",
+					from: "start",
 				}
 			}
 		)
-		.from("#text3",
+		.from("#arrow",
 			{
 				autoAlpha: 0,
 				y: -50,
 				scale: 0.5,
-				duration: 0.8,
+				duration: 0.5
 			}
 		)
-		.from("#spanHeader", {
-			autoAlpha: 0,
-			y: -50,
-			scale: 0.5,
-			duration: 0.8,
-		});
 	});
 </script>
