@@ -1,6 +1,9 @@
 ---
 import EmailIcon from './icons/EmailIcon.astro';
 
+const currentPath = Astro.url.pathname;
+const isEnglish = currentPath.startsWith('/en');
+
 import { getI18N } from '../i18n/';
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale })
@@ -13,8 +16,8 @@ const i18n = getI18N({ currentLocale })
             <span data-i18n="badge">{i18n.Span_Header}</span>
         </div>
         <div class="inline-flex rounded-lg border border-[#27272a] bg-[#141417]/50 p-0.5 text-[11px] font-mono">
-            <a href="/" class="px-2.5 py-1 rounded-md transition-all text-zinc-100 bg-zinc-800">ES</a>
-            <a href="/en" class="px-2.5 py-1 rounded-md transition-all text-zinc-400 hover:text-zinc-100">EN</a>
+            <a href="/" class={`px-2.5 py-1 rounded-md transition-all ${!isEnglish ? 'text-zinc-100 bg-zinc-800' : 'text-zinc-400 hover:text-zinc-100'}`}>ES</a>
+            <a href="/en" class={`px-2.5 py-1 rounded-md transition-all ${isEnglish ? 'text-zinc-100 bg-zinc-800' : 'text-zinc-400 hover:text-zinc-100'}`}>EN</a>
         </div>
     </div>
     <div class="space-y-4">
