@@ -3,7 +3,6 @@ import Estudios from '../components/Estudios.astro';
 import Experiencia from '../components/Experiencia.astro';
 import Habilidades from '../components/Habilidades.astro';
 import Header from '../components/Header.astro';
-import Inicio from '../components/Inicio.astro';
 import Proyectos from '../components/Proyectos.astro';
 import Layout from '../layouts/Layout.astro';
 
@@ -13,79 +12,39 @@ const i18n = getI18N({ currentLocale })
 ---
 
 <Layout title={i18n.Title} description={i18n.Description}>
-	<Header/>
-	<main id="inicio" class="grid w-full h-auto place-items-center">
-		<Inicio/>
-		<Experiencia/>
-		<Proyectos/>
-		<Habilidades/>
-		<Estudios/>
-	</main>
+	<div class="max-w-7xl mx-auto min-h-screen grid grid-cols-1 lg:grid-cols-12 border-x border-[#27272a]">
+		<aside class="lg:col-span-5 p-8 lg:p-14 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#27272a] lg:sticky lg:top-0 lg:h-screen">
+			<Header/>
+		</aside>
+		<main id="inicio" class="lg:col-span-7 p-8 lg:p-16 space-y-32">
+			<Experiencia/>
+			<Proyectos/>
+			<Habilidades/>
+			<Estudios/>
+		</main>
+		<div id="resumeContainer" class="absolute hidden top-[100px] left-1/2 -translate-x-1/2 z-50">
+			<button id="closeResume" class="absolute -top-10 right-0 text-white bg-black/70 px-3 py-1 rounded border border-transparent hover:border-white">
+				✕ Cerrar
+			</button>
+			<iframe
+				src=`media/${i18n.Link_PDF}`
+				width="500px"
+				height="600px"
+			></iframe>
+		</div>
+	</div>
 </Layout>
 
 <script>
-	import { gsap } from "gsap";
+    let openResumeButton = document.getElementById('openResume') as HTMLButtonElement;
+    let closeResumeButton = document.getElementById('closeResume') as HTMLButtonElement;
+    let resumeContainer = document.getElementById('resumeContainer') as HTMLElement;
 
-	document.addEventListener("DOMContentLoaded", function() {
-		const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+    openResumeButton.addEventListener('click', () => {
+        resumeContainer.classList.remove('hidden');
+    });
 
-		tl.from("#spanHeader", {
-			autoAlpha: 0,
-			y: -50,
-			scale: 0.5,
-			duration: 0.5,
-		})
-		.from("#text1",
-			{
-				autoAlpha: 0,
-				y: -50,
-				scale: 0.5,
-				duration: 0.5,
-			}
-		)
-		.from("#text2",
-			{
-				autoAlpha: 0,
-				y: -50,
-				scale: 0.5,
-				duration: 0.5,
-			}
-		)
-		.from("#text3",
-			{
-				autoAlpha: 0,
-				y: -50,
-				scale: 0.5,
-				duration: 0.5,
-			}
-		)
-		.from("#openResume",
-			{
-				autoAlpha: 0,
-				y: -50,
-				scale: 0.5,
-				duration: 0.5,
-			}
-		)
-		.from(".iconInicio",
-			{
-				autoAlpha: 0,
-				y: -50,
-				scale: 0.5,
-				stagger: {
-					each: 0.1,
-					grid: "auto",
-					from: "start",
-				}
-			}
-		)
-		.from("#arrow",
-			{
-				autoAlpha: 0,
-				y: -50,
-				scale: 0.5,
-				duration: 0.5
-			}
-		)
-	});
+    closeResumeButton.addEventListener('click', () => {
+        resumeContainer.classList.add('hidden');
+    });
 </script>

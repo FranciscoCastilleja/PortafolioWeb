@@ -1,96 +1,50 @@
 ---
-import EsMxIcon from './icons/EsMxIcon.astro'
-import EnUsIcon from './icons/EnUsIcon.astro'
+import EmailIcon from './icons/EmailIcon.astro';
 
 import { getI18N } from '../i18n/';
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale })
 ---
 
-<header class="grid fixed mt-6 w-full h-10 place-items-center z-10">
-    <nav id="nav" class="flex py-1 px-3 size-auto text-white bg-[#121212] rounded-3xl border border-white/30 gap-x-2 sm:gap-x-5">
-        <a href="#inicio" class="p-1 text-white z-30">{i18n.Menu_OP_1}</a>
-        <a href="#experiencia" class="p-1 text-white z-30">{i18n.Menu_OP_2}</a>
-        <a href="#proyectos" class="p-1 text-white z-30">{i18n.Menu_OP_3}</a>
-        <button class="p-1 text-white z-30" onclick="document.getElementById('Lang_Ops').classList.toggle('hidden')">{i18n.Menu_OP_4}</button>
-        <div id="menuBackdrop" class="absolute bg-purple-900 rounded left-[var(--left)] top-[var(--top)] w-[var(--width)] h-[var(--height)] transition-all duration-300 ease-in-out opacity-0 z-20"></div>
-    </nav>
-    <div id="Lang_Ops" class="hidden absolute p-3 top-12 bg-transparent rounded-lg border border-white/30">
-        <a href="/" class="hidden p-1 text-white gap-x-3 rounded-lg lg:flex hover:font-black">
-            {i18n.Menu_OP_4_es}
-        </a>
-        <a href="/en" class="hidden p-1 text-white gap-x-3 rounded-lg lg:flex hover:font-black">
-            {i18n.Menu_OP_4_en}
-        </a>
-        <a href="/" class="flex p-1 gap-x-3 rounded-lg lg:hidden hover:scale-110">
-            <EsMxIcon width="25" height="25"/>
-        </a>
-        <a href="/en" class="flex p-1 gap-x-3 rounded-lg lg:hidden hover:scale-110">
-            <EnUsIcon width="25" height="25"/>
-        </a>
+<div class="space-y-8">
+    <div class="flex items-center justify-between">
+        <div id="side-badge" class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#27272a] bg-[#141417]/50 text-[11px] font-mono tracking-widest uppercase text-zinc-400">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span data-i18n="badge">{i18n.Span_Header}</span>
+        </div>
+        <div class="inline-flex rounded-lg border border-[#27272a] bg-[#141417]/50 p-0.5 text-[11px] font-mono">
+            <a href="/" class="px-2.5 py-1 rounded-md transition-all text-zinc-100 bg-zinc-800">ES</a>
+            <a href="/en" class="px-2.5 py-1 rounded-md transition-all text-zinc-400 hover:text-zinc-100">EN</a>
+        </div>
     </div>
-</header>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-		var scrollLinks = document.querySelectorAll('nav a');
-
-		scrollLinks.forEach(function(scrollLink) {
-			scrollLink.addEventListener('click', function(this: HTMLAnchorElement, e) {
-				e.preventDefault();
-
-                let hrefAttribute = this.getAttribute('href');
-
-                if(hrefAttribute) {
-                    var targetId = hrefAttribute.substring(1);
-				
-                    var targetElement = document.getElementById(targetId) as HTMLElement;
-
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-			});
-		});
-	});
-</script>
-
-<script>
-    let LangOps = document.getElementById("Lang_Ops") as HTMLElement;
-    let body = document.querySelector('body') as HTMLElement;
-    let nav = document.getElementById('nav') as HTMLElement;
-    let btn = nav.querySelector('button') as HTMLButtonElement;
-
-    function CheckMenu() {
-        let l = btn.getBoundingClientRect().left;
-        if (body.clientWidth > 1023) { 
-            LangOps.style.left = (l - 15).toString() + "px";
-        } else {
-            LangOps.style.left = (l).toString() + "px";
-        }
-    }
-
-    setInterval(CheckMenu, 1)
-
-    const menuBackdrop = document.getElementById('menuBackdrop') as HTMLElement;
-    const navLinks = nav.querySelectorAll('a, button');
-
-    navLinks.forEach(link => {
-        link.addEventListener('mouseenter', (e) => {
-            const target = e.target as HTMLElement;
-            const rect = target.getBoundingClientRect();
-            menuBackdrop.style.setProperty('--left', `${rect.left}px`);
-            menuBackdrop.style.setProperty('--top', `${rect.top-24}px`);
-            menuBackdrop.style.setProperty('--width', `${rect.width}px`);
-            menuBackdrop.style.setProperty('--height', `${rect.height}px`);
-
-            menuBackdrop.style.opacity = '1';
-            menuBackdrop.style.visibility = 'visible';
-        });
-
-        link.addEventListener('mouseleave', () => {
-            menuBackdrop.style.opacity = '0';
-            menuBackdrop.style.visibility = 'hidden';
-        });
-    });
-</script>
+    <div class="space-y-4">
+        <h1 id="side-title" class="text-4xl lg:text-6xl font-light tracking-tight font-serif-editorial leading-none" data-i18n="title">
+            {i18n.Header_1}
+        </h1>
+        <p id="side-desc" class="text-zinc-400 text-2xl font-light leading-relaxed max-w-sm" data-i18n="desc">
+            Francisco Castilleja
+        </p>
+    </div>
+    <nav id="side-nav" class="hidden lg:flex flex-col gap-2 pt-6 text-xs font-mono tracking-widest text-zinc-500 uppercase">
+        <a href="#experiencia" class="hover:text-zinc-100 transition-colors flex items-center gap-4 group">
+            <span class="w-6 h-[1px] bg-[#27272a] group-hover:w-12 group-hover:bg-zinc-100 transition-all"></span> <span data-i18n="nav_exp">01. {i18n.Menu_OP_1}</span>
+        </a>
+        <a href="#proyectos" class="hover:text-zinc-100 transition-colors flex items-center gap-4 group">
+            <span class="w-6 h-[1px] bg-[#27272a] group-hover:w-12 group-hover:bg-zinc-100 transition-all"></span> <span data-i18n="nav_proyectos">02. {i18n.Menu_OP_2}</span>
+        </a>
+        <a href="#habilidades" class="hover:text-zinc-100 transition-colors flex items-center gap-4 group">
+            <span class="w-6 h-[1px] bg-[#27272a] group-hover:w-12 group-hover:bg-zinc-100 transition-all"></span> <span data-i18n="nav_habilidades">03. {i18n.Menu_OP_3}</span>
+        </a>
+        <a href="#estudios" class="hover:text-zinc-100 transition-colors flex items-center gap-4 group">
+            <span class="w-6 h-[1px] bg-[#27272a] group-hover:w-12 group-hover:bg-zinc-100 transition-all"></span> <span data-i18n="nav_estudios">04. {i18n.Menu_OP_4}</span>
+        </a>
+    </nav>
+</div>
+<div id="side-links" class="pt-10 lg:pt-0 flex flex-wrap gap-3 items-center">
+    <button id="openResume" class="px-4 py-2 rounded-lg border border-[#27272a] bg-[#141417] hover:bg-zinc-800 text-xs font-mono uppercase tracking-wider transition-all" data-i18n="link_cv">CV</button>
+    <a href="https://linkedin.com/in/francisco-castilleja" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg border border-[#27272a] bg-[#141417] hover:bg-zinc-800 text-xs font-mono uppercase tracking-wider transition-all">LinkedIn</a>
+    <a href="https://github.com/FranciscoCastilleja" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg border border-[#27272a] bg-[#141417] hover:bg-zinc-800 text-xs font-mono uppercase tracking-wider transition-all">GitHub</a>
+    <button class="px-4 py-2 rounded-lg border border-[#27272a] bg-[#141417] hover:bg-zinc-800 text-xs font-mono uppercase tracking-wider transition-all" data-i18n="link_mail" onclick="navigator.clipboard.writeText('Francisco_Castilleja@outlook.com')">
+        <EmailIcon class="size-4 text-white"/>
+    </button>
+</div>

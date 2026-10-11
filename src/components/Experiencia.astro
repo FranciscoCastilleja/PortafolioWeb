@@ -1,6 +1,4 @@
 ---
-import Section from "./Section.astro";
-
 import AstroIcon from './icons/AstroIcon.astro';
 import ReactIcon from './icons/ReactIcon.astro';
 import PostgreSQLIcon from './icons/PostgreSQLIcon.astro';
@@ -16,14 +14,19 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale })
 ---
 
-<Section id="experiencia">
-    <h2 id="experiencia-header" class="pb-1 text-5xl uppercase text-white font-black select-none">{i18n.Menu_OP_2}</h2>
-    <div id="experiencia-content" class="flex py-5 w-full h-[40rem] flex-col items-center gap-y-5 md:flex-row md:justify-center gap-x-5 md:h-fit">
-        <div class="p-5 w-80 h-[stretch] bg-white/5 rounded-lg flex flex-col gap-y-3">
-            <p class="text-sm font-light text-white/50">{i18n.Exp_1_Date}</p>
-            <h3 class="text-lg font-semibold text-white">{i18n.Exp_1_Header}</h3>
-            <p class="text-sm font-normal text-white/80">{i18n.Exp_1_Description}</p>
-            <span class="flex">
+<section id="experiencia" class="gsap-reveal space-y-8">
+    <div class="flex items-center justify-between border-b border-line pb-4">
+        <h2 class="text-xs uppercase tracking-[0.3em] font-mono text-zinc-500" data-i18n="sec_exp_title">01 / {i18n.Menu_OP_1}</h2>
+    </div>
+    <div class="space-y-12">
+        <div class="group relative pl-6 border-l border-line hover:border-zinc-200 transition-colors">
+            <div class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-zinc-600 group-hover:bg-zinc-100 transition-colors"></div>
+            <span class="text-xs text-zinc-500 font-mono">{i18n.Exp_1_Date}</span>
+            <h3 class="text-xl font-medium tracking-tight mt-1 text-zinc-200">{i18n.Exp_1_Header}</h3>
+            <p class="text-sm text-zinc-400 mt-2 font-light leading-relaxed" data-i18n="exp_desc">
+                {i18n.Exp_1_Description}
+            </p>
+            <span class="flex mt-5">
                 <AstroIcon width="25" height="25"/>
                 <ReactIcon width="25" height="25" class="ml-2"/>
                 <PostgreSQLIcon width="25" height="25" class="ml-2"/>
@@ -35,11 +38,14 @@ const i18n = getI18N({ currentLocale })
                 <JWTIcon width="25" height="25" class="ml-2"/>
             </span>
         </div>
-        <div class="p-5 w-80 h-full bg-white/5 rounded-lg flex flex-col gap-y-3">
-            <p class="text-sm font-light text-white/50">{i18n.Exp_2_Date}</p>
-            <h3 class="text-lg font-semibold text-white">{i18n.Exp_2_Header}</h3>
-            <p class="text-sm font-normal text-white/80">{i18n.Exp_2_Description}</p>
-            <span class="flex">
+        <div class="group relative pl-6 border-l border-line hover:border-zinc-200 transition-colors">
+            <div class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-zinc-600 group-hover:bg-zinc-100 transition-colors"></div>
+            <span class="text-xs text-zinc-500 font-mono">{i18n.Exp_2_Date}</span>
+            <h3 class="text-xl font-medium tracking-tight mt-1 text-zinc-200">{i18n.Exp_2_Header}</h3>
+            <p class="text-sm text-zinc-400 mt-2 font-light leading-relaxed" data-i18n="exp_desc">
+                {i18n.Exp_2_Description}
+            </p>
+            <span class="flex mt-5">
                 <AstroIcon width="25" height="25"/>
                 <ReactIcon width="25" height="25" class="ml-2"/>
                 <PostgreSQLIcon width="25" height="25" class="ml-2"/>
@@ -52,32 +58,4 @@ const i18n = getI18N({ currentLocale })
             </span>
         </div>
     </div>
-</Section>
-
-<script>
-    import { gsap } from "gsap";
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from("#experiencia-header", {
-        scrollTrigger: {
-            trigger: "#experiencia-header",
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "play none none reverse"
-        },
-        autoAlpha: 0,
-        y: 50
-    });
-    gsap.from("#experiencia-content", {
-        scrollTrigger: {
-            trigger: "#experiencia-content",
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "play none none reverse"
-        },
-        autoAlpha: 0,
-        y: 50
-    });
-</script>
+</section>

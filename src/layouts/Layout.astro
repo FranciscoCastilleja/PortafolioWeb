@@ -22,7 +22,7 @@ const i18n = getI18N({ currentLocale })
 		<meta name="generator" content={Astro.generator} />
 		<title>{i18n.Title}</title>
 	</head>
-	<body>
+	<body class="bg-[#0c0c0e] text-zinc-100 antialiased selection:bg-zinc-200 selection:text-zinc-950 overflow-x-hidden">
 		<slot />
 		<script src="../../node_modules/medium-zoom/dist/medium-zoom.min.js"></script>
 	</body>
@@ -30,10 +30,6 @@ const i18n = getI18N({ currentLocale })
 <style is:global>
 	html {
 		font-family: 'Montserrat', sans-serif;
-	}
-
-	body {
-		background-color: #09090b;
 	}
 </style>
 

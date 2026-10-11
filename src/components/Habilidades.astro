@@ -1,132 +1,40 @@
 ---
-import GitHubIcon from "./icons/GitHubIcon.astro";
-import GitIcon from "./icons/GitIcon.astro";
-import PythonIcon from "./icons/PythonIcon.astro";
-import MarkdownIcon from "./icons/MarkdownIcon.astro";
-import JavaScriptIcon from "./icons/JavaScriptIcon.astro";
-import HTML5Icon from "./icons/HTML5Icon.astro";
-import CSSIcon from "./icons/CSSIcon.astro";
-import TailwindCSSIcon from "./icons/TailwindCSSIcon.astro";
-import AstroIcon from "./icons/AstroIcon.astro";
-import MySQLIcon from "./icons/MySQLIcon.astro";
-import MicrosoftSQLServerIcon from "./icons/MicrosoftSQLServerIcon.astro";
-import PHPIcon from "./icons/PHPIcon.astro";
-import StripeIcon from "./icons/StripeIcon.astro";
-import NuxtIcon from "./icons/NuxtIcon.astro";
-import FigmaIcon from "./icons/FigmaIcon.astro";
-
-import Section from "./Section.astro";
-
 import { getI18N } from '../i18n/';
-import TypeScriptIcon from "./icons/TypeScriptIcon.astro";
-import ReactIcon from "./icons/ReactIcon.astro";
-import NextjsIcon from "./icons/NextjsIcon.astro";
-import VercelIcon from "./icons/VercelIcon.astro";
-import NetlifyIcon from "./icons/NetlifyIcon.astro";
-import SupabaseIcon from "./icons/SupabaseIcon.astro";
-import NodejsIcon from "./icons/NodejsIcon.astro";
-import ExpressjsIcon from "./icons/ExpressjsIcon.astro";
-import AngularIcon from "./icons/AngularIcon.astro";
-import PostgreSQLIcon from "./icons/PostgreSQLIcon.astro";
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale })
 ---
 
-<Section id="habilidades">
-    <h2 id="habilidades-header" class="pb-1 text-5xl uppercase text-white font-black select-none">{i18n.OP_5}</h2>
-    <div id="habilidades-content" class="flex py-5 w-full h-auto gap-x-5 overflow-hidden whitespace-nowrap group">
-        <div class="flex py-2 gap-x-5 animate-[slider_15s_linear_infinite] group-hover:[animation-play-state:paused]">
-            <HTML5Icon width="50" height="50"/>
-            <CSSIcon width="50" height="50"/>
-            <TailwindCSSIcon width="50" height="50"/>
-            <JavaScriptIcon width="50" height="50"/>
-            <TypeScriptIcon width="50" height="50"/>
-            <AstroIcon class="fill-black dark:fill-white" width="50" height="50"/>
-            <NextjsIcon width="50" height="50"/>
-            <ReactIcon width="50" height="50"/>
-            <GitIcon/>
-            <GitHubIcon width="50" height="50"/>
-            <VercelIcon class="fill-black dark:fill-white"/>
-            <NetlifyIcon width="50" height="50"/>
-            <SupabaseIcon width="50" height="50"/>
-            <NodejsIcon width="50" height="50"/>
-            <ExpressjsIcon width="50" height="50"/>
-            <PostgreSQLIcon width="50" height="50"/>
-            <MySQLIcon/>
-            <MicrosoftSQLServerIcon/>
-            <AngularIcon width="50" height="50"/>
-            <StripeIcon width="50" height="50"/>
-            <NuxtIcon width="50" height="50"/>
-            <FigmaIcon width="50" height="50"/>
-            <PHPIcon class="fill-black dark:fill-white" width="50" height="50"/>
-            <MarkdownIcon class="fill-black stroke-black dark:fill-white dark:stroke-white"/>
-            <PythonIcon/>
-        </div>
-        <div class="flex py-2 gap-x-5 animate-[slider_15s_linear_infinite] group-hover:[animation-play-state:paused]">
-            <HTML5Icon width="50" height="50"/>
-            <CSSIcon width="50" height="50"/>
-            <TailwindCSSIcon width="50" height="50"/>
-            <JavaScriptIcon width="50" height="50"/>
-            <TypeScriptIcon width="50" height="50"/>
-            <AstroIcon class="fill-black dark:fill-white" width="50" height="50"/>
-            <NextjsIcon width="50" height="50"/>
-            <ReactIcon width="50" height="50"/>
-            <GitIcon/>
-            <GitHubIcon width="50" height="50"/>
-            <VercelIcon class="fill-black dark:fill-white"/>
-            <NetlifyIcon width="50" height="50"/>
-            <SupabaseIcon width="50" height="50"/>
-            <NodejsIcon width="50" height="50"/>
-            <ExpressjsIcon width="50" height="50"/>
-            <PostgreSQLIcon width="50" height="50"/>
-            <MySQLIcon/>
-            <MicrosoftSQLServerIcon/>
-            <AngularIcon width="50" height="50"/>
-            <StripeIcon width="50" height="50"/>
-            <NuxtIcon width="50" height="50"/>
-            <FigmaIcon width="50" height="50"/>
-            <PHPIcon class="fill-black dark:fill-white" width="50" height="50"/>
-            <MarkdownIcon class="fill-black stroke-black dark:fill-white dark:stroke-white"/>
-            <PythonIcon/>
-        </div>
+<section id="habilidades" class="gsap-reveal space-y-8">
+    <div class="flex items-center justify-between border-b border-line pb-4">
+        <h2 class="text-xs uppercase tracking-[0.3em] font-mono text-zinc-500" data-i18n="sec_skills_title">03 / {i18n.Menu_OP_3}</h2>
     </div>
-</Section>
-
-<style>
-    @keyframes slider {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-100%);
-        }
-    }
-</style>
-
-<script>
-    import { gsap } from "gsap";
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from("#habilidades-header", {
-        scrollTrigger: {
-            trigger: "#habilidades-header",
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "play none none reverse",
-        },
-        autoAlpha: 0,
-        y: 50
-    });
-    gsap.from("#habilidades-content", {
-        scrollTrigger: {
-            trigger: "#habilidades-content",
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "play none none reverse",
-        },
-        autoAlpha: 0,
-        y: 50
-    });
-</script>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">HTML</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">CSS</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">Tailwind CSS</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">JavaScript</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">TypeScript</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">Astro</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">NextJs</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">React</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">Git</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">GitHub</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">Vercel</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">Netlify</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">Supabase</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">NodeJs</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">ExpressJs</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">PostgreSQL</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">MySQL</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">Microsoft SQL Server</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">Angular</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">Stripe</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">Nuxt</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">Figma</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">PHP</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">Markdown</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">Python</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">JWT</div>
+        <div class="p-4 rounded-xl border border-line bg-surface/20 text-xs font-mono text-zinc-300">GSAP</div>
+    </div>
+</section>
