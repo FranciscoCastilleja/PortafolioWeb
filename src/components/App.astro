@@ -13,8 +13,18 @@ const i18n = getI18N({ currentLocale })
 
 <Layout title={i18n.Title} description={i18n.Description}>
 	<div class="max-w-7xl mx-auto min-h-screen grid grid-cols-1 lg:grid-cols-12 border-x border-[#27272a]">
-		<aside class="lg:col-span-5 p-8 lg:p-14 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#27272a] lg:sticky lg:top-0 lg:h-screen">
+		<aside class="lg:col-span-5 p-8 lg:p-14 relative flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#27272a] lg:sticky lg:top-0 lg:h-screen">
 			<Header/>
+			<div id="resumeContainer" class="absolute hidden top-[100px] left-1/2 -translate-x-1/2 z-50">
+				<button id="closeResume" class="absolute -top-10 right-0 text-white bg-black/70 px-3 py-1 rounded border border-transparent hover:border-white">
+					✕ Cerrar
+				</button>
+				<iframe
+					src=`media/${i18n.Link_PDF}`
+					width="500px"
+					height="600px"
+				></iframe>
+			</div>
 		</aside>
 		<main id="inicio" class="lg:col-span-7 p-8 lg:p-16 space-y-32">
 			<Experiencia/>
@@ -22,16 +32,6 @@ const i18n = getI18N({ currentLocale })
 			<Habilidades/>
 			<Estudios/>
 		</main>
-		<div id="resumeContainer" class="absolute hidden top-[100px] left-1/2 -translate-x-1/2 z-50">
-			<button id="closeResume" class="absolute -top-10 right-0 text-white bg-black/70 px-3 py-1 rounded border border-transparent hover:border-white">
-				✕ Cerrar
-			</button>
-			<iframe
-				src=`media/${i18n.Link_PDF}`
-				width="500px"
-				height="600px"
-			></iframe>
-		</div>
 	</div>
 </Layout>
 
